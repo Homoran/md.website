@@ -1,0 +1,17 @@
+{
+  "common": {
+    "name": "Harmony",
+    "docversion": "0.9.3"
+  },
+  "authors": [
+    "Rainer <>",
+    "Thomas Rohé <thomas@familie-rohe.eu>"
+  ],
+  "languages": [
+    "de"
+  ],
+  "native": {
+    "filename": "info.md",
+    "mediadir": "media"
+  }
+}
