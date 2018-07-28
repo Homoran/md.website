@@ -74,4 +74,4 @@
   Vorlagenabschnitte sind in der hinterlegten Reihenfolge und Form zu nutzen.
 
 [Plugin]: http://editorconfig.org/#download
-[Vorlage]: /doc/adapter/io_adapter_tempate.md
+[Vorlage]: /doc/adapter/io_adapter_template.md
