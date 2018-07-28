@@ -54,18 +54,49 @@ fernsteuern sowie den Status von Aktivitäten abfragen.
 
 Eine Instanz des Adapters wird über den Admin installiert.
 
+Dazu wird unter der Rubrik "Adapter" die Kachel für den Harmony Adapter gesucht.
+
+<img src="media/adapter_harmony_install_01.png">
+
+Auf dieser Kachel wird auf das Icon für die erweiterten Einstellungen geklickt.
+
+<img src="media/adapter_harmony_install_02.png">
+
+und in diesen Einstellungen auf das (+) zum Erstellen einer Instanz.
+
+Es öffnet sich ein Installationsfenster in dem der Fortschritt der Installation
+durch die Anzeige der ablaufenden Befehlsfolgen angezeigt wird.
+
+<img src="media/adapter_harmony_install_03.png">
+
+Nach vollendeter Installation schließt sich das Fenster standardmäßig von selbst.
+
+<img src="media/adapter_harmony_install_04.png">
+
+
+Danach öffnet sich das Konfigurationsfenster der Instanz.
 
 ##  Konfiguration
 
 Der Adapter findet automatisch die harmony Hubs im lokalen Netzwerk
-Jede Menge Bilder
-Beschreibung jedes Formularfeldes
+
+<img src="media/adapter_harmony_config_01.png">
+
+Die angezeigten Felder müssen nur ausgefüllt werden, wenn der Hub mit Usernamen und
+Passwort gesichert ist.
+
+Jetzt kann man das Konfigurationsfenster schließen.
+
+
 
 
 ## Angelegte Objekte und ihre Bedeutung
-<img src="media/adapter_harmony_objects_small.png">
 
-Die Struktur und ihre Funktionen sind wie folgt:
+in der Rubrik wurde eine neue Gruppe für die Instanz (üblicherweise harmony.0) angelegt.
+
+<img src="media/adapter_harmony_objects_01.png">
+
+Die Struktur der angelegten Objekte und ihre Funktionen sind wie folgt:
 
 **Instanz**
 
