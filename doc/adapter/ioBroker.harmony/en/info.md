@@ -2,6 +2,8 @@
 
 # Logitech Harmony Hub
 
+Ich bin in Englisch.
+
 Mit Hilfe des von Logitech hergestellten Harmony Hubs erhält man eine
 Universalfernbedienung zum Steuern von Unterhaltungs- und Smart Home-Geräten.
 Sie haben die Möglichkeit zum Wechseln von Programmen, Regulieren der
