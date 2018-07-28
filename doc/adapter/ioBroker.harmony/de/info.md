@@ -50,8 +50,8 @@ Jede Menge Bilder
 Beschreibung jedes Formularfeldes
 
 
-## Angelgte Objekte und ihre Bedeutung
-Lorem ipsum
+## Angelegte Objekte und ihre Bedeutung
+<img src="media/adapter_harmony_objects" width=150 hight=150 />
 
 ### Lesbare States
 Lorem ipsum
