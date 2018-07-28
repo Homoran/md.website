@@ -4,8 +4,8 @@
 
 ## Vorbemerkung
 Der Logitech Harmony Hub ermöglichtüber eine passende Fernbedienung oder App
-eine Vielzahl von Unterhaltungs- und Smart Home-Geräte zu steuern.
-Damit kann man Programme wechseln, die Lautstärke regulieren bishin zum
+eine Vielzahl von Unterhaltungs- und Smart Home-Geräten zu steuern.
+Damit kann man Programme wechseln, die Lautstärke regulieren bis hin zum
 Programmieren von Favoriten, Steuern der Beleuchtung und anderer Smart-Geräte. 
 Das Highlight des Systems ist das Erstellen von Aktionen zur Steuerung von mehreren
 Geräten mit nur einem Tastendruck.
@@ -16,9 +16,10 @@ Spielkonsolen bis hin zu AV-Receivern und Streaming-Media-Playern sowie
 intelligente Beleuchtung, Schlösser, Thermostate und mehr –
 Harmony Hub ist mit nahezu allen Geräten kompatibel.
 
+
 ## Der Adapter
 
-Dieser Adapter ermöglicht die Einbindung des Logitch Harmony Hubs mit all
+Dieser Adapter ermöglicht die Einbindung des Logitech Harmony Hubs mit all
 seinen Möglichkeiten in das ioBroker-System. Der ioBroker kann über den
 Harmony Hub Aktivitäten starten und beenden, Geräte durch virtuelle Tastendrücke
 fernsteuern sowie den Status von Aktivitäten abfragen.
