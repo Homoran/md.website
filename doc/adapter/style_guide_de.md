@@ -8,7 +8,7 @@
     Mit dieser Datei werden Metadaten sowie die Dateistruktur der
     Dokumentation beschrieben. Zum Aufbau dieser Datei siehe ...
   * Wenn die Dokumentation in deutsch vorliegt, wird sie im Unterordner
-    `de` gespeichert. Erlaubte Sprachen und damit Ordnernamen sind:
+    `de` gespeichert. Aktuell unterstützte Sprachen und damit Ordnernamen sind:
     `en, de, ru, pt, nl, fr, it, es, pl`.
   * Die eigentliche Adapterdokumentation steht der Datei `info.md`,
     die direkt im jeweilgen Sprachenordner liegt.
@@ -33,7 +33,7 @@
 * Werden Klammerelemente verwendet (alle Klammerformen und
   Anführungszeichen), werden Satzzeichen wie folgt gesetzt:
   * Innerhalb der Klammer, wenn das Klammerelement einen kompletten
-    Satz enthält (Subjekt, Verb, Objekt).
+    Satz enthält (Subjekt, Prädikat, Objekt).
   * Außerhalb der Klammer, wenn das Klammerelement nur einen Teilsatz
     enthält.
 * Dokumente beginnen immer mit einer Überschrift in der Ebene H1.
@@ -52,7 +52,7 @@
     nicht möglich ist, dann als jpg oder png-Datei. Bitte ein Auge auf die
     Dateigröße haben.
 * Für Quelltextabschnitte gilt folgendes:
-  * Je nach Quellcodesprache ist ein entsprechende Markup zu wählen. Zum
+  * Je nach Quellcodesprache ist ein entsprechendes Markup zu wählen. Zum
     Beispiel ` ```js`  für JavaScript.
   * Ein Quelltext kann, muss aber nicht vollständig sein. Quelltextblöcke
     stellen Beispiele zur Verdeutlichung des jeweis gerade beschriebenen
@@ -61,14 +61,14 @@
     bereitgestellt werden soll, erfolgt das als Mediendatei im Ordner
     `media/{code_beispieldatei}` mit einer entsprechender Verknüpfung in
     der Dokumentation.
-* Falls Unterstriche, Hochkommas, Sternchen oder Backslashes verwendet
+* Falls Unterstriche, Hochkommata, Sternchen oder Backslashes verwendet
   werden, sind die richtigen Escape-Zeichen zu setzten:
   `\_`, `\*`, `\\` und ``\` `` anstelle von `_`, `*`, `\` und `` ` ``.
 * Um einen Hinweis besonders hervorzuheben, sind die folgenden Richtlinien
   zu beachten:
-  * Setze den "Hinweis:"-Bezeichner in italic, also als `*Hinweis*:`.
-  * Fahre mit einem Großbuchstaben nach dem "Hinweis:"-Bezeichner fort.
-  * Setze den Hinweis an den Anfang eines neuen Absatzes, damit er besser
+  * Der "Hinweis:"-Bezeichner ist in italic zu setzen, also als `*Hinweis*:`.
+  * Nach dem "Hinweis:"-Bezeichner ist mit einem Großbuchstaben fortzufahren.
+  * Der Hinweis ist an den Anfang eines neuen Absatzes zu setzen, damit er besser
     sichtbar ist.
 * Für Adapter-Dokumentionen gibt es eine [Vorlage][]. Die relevanten
   Vorlagenabschnitte sind in der hinterlegten Reihenfolge und Form zu nutzen.
