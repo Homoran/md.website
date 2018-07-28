@@ -35,17 +35,28 @@ fernsteuern sowie den Status von Aktivitäten abfragen.
 | zebra stripes | are neat      |    $1 |
 
 
-## Voraussetzungen
-Lorem ipsum
+## Steckbrief
+
+| aktuelle Version stable| link und logo npm |
+| aktuelle Version latest | link und logo npm      |
+| OS| Linux, Windows; OS X | (hoffe ich) |
+| node-Version | >= 4.x |
+| Entwickler | Pmant |
+| Lizenz | MIT |
+| Github | LINK |
+| Keywords | Logitech, Fernbedienung |
+| Kategorie | Multimedia |
+| Stand der Doku | 28.07.2018 |
 
 
 ## Installation
-Lorem ipsum
-Installiere über den Admin
-Der Adapter findet automatisch die harmony Hubs im lokalen Netzwerk
+
+Eine Instanz des Adapters wird über den Admin installiert.
 
 
 ##  Konfiguration
+
+Der Adapter findet automatisch die harmony Hubs im lokalen Netzwerk
 Jede Menge Bilder
 Beschreibung jedes Formularfeldes
 
@@ -89,13 +100,10 @@ mehrere Instanzen sind bei diesem Adapter nicht erlaubt
 
 
 
-### Lesbare States
-Lorem ipsum
-
-### Beschreibbare States
-Lorem ipsum
 
 #### Bedeutung der States
+(in die Struktur oben einbinden!)
+
 ##### activities
 **Start:**
 Set the status state 'Instance.Hub_Name.activities.Activity_Name' to a Number greater than 0.
@@ -164,24 +172,19 @@ Performance
   Lösung:
 
 
-## Entwicklerbereich
 
-### Allgemein
+## Einbinden der States
 
-
-
-### Blockley
+### Blockly
 Lorem ipsum
 
 ### Node-Red
 Lorem ipsum
 
-
 ### vis
 Lorem ipsum
 
-
-## History
+### History
 Lorem ipsum
 
 
@@ -189,6 +192,10 @@ Lorem ipsum
 Irgendwo kommen auch noch Links zu GitHub (Entwicklerbereich?) und
 externen Ressourcen? Aber bitte nicht gleich am Doku-Anfang, eher am Ende.
 Zuerst die leichte Kost.
+
+
+
+## Entwicklerbereich
 
 
 ----------
