@@ -181,6 +181,29 @@ A value smaller than 250 probably will send the command only once.
 After sending the state will be set to 0 again.
 
 
+## Deinstallation
+sollte die Instanz wieder entfernt werden sollen wird diese über das zugeordnete Mülleimer-Icon 
+in der Rubrik Instanzen entfernt
+
+<img src="media/adapter_harmony_delete_01.png">
+
+Es erscheint eine Sicherheitsabfrage, die mit ***OK*** bestätigt werden muss
+
+<img src="media/adapter_harmony_delete_02.png">
+
+Anschließend erscheint wieder ein Fenster, dass die Abarbeitung der Deinstallationsbefehle zeigt
+
+<img src="media/adapter_harmony_delete_03.png">
+
+Bei dieser Deinstallation werden alle zu der Instanz gehörenden Objekte vollständig entfernt.
+
+Sollten die Installationsdateien vollständig von dem Host gelöscht werden, muss dies über das Mülleimer-Icon 
+in der Kachel des Harmony-Adapters in der Rubrik Adapter geschehen.
+
+
+
+
+
 ## Beispiele/Demo
 Lorem ipsum
 
