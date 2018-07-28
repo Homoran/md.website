@@ -10,7 +10,7 @@
   * Wenn die Dokumentation in deutsch vorliegt, wird sie im Unterordner
     `de` gespeichert. Aktuell unterstützte Sprachen und damit Ordnernamen sind:
     `en, de, ru, pt, nl, fr, it, es, pl`.
-  * Die eigentliche Adapterdokumentation steht der Datei `info.md`,
+  * Die eigentliche Adapterdokumentation steht in der Datei `info.md`,
     die direkt im jeweilgen Sprachenordner liegt.
   * Medien werden im Unterordner `media` abgelegt, der sich ebenfalls im
     Sprachenordner befindet.
