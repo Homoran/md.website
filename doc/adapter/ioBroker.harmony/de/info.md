@@ -19,6 +19,15 @@ seinen Möglichkeiten in das ioBroker-System. Der ioBroker kann über den
 Harmony Hub Aktivitäten starten und beenden, Geräte durch virtuelle Tastendrücke
 fernsteuern sowie den Status von Aktivitäten abfragen.
 
+> Hier netter Screenshot zur Motivation, z.B. aus VIS oder oder oder
+
+
+### Ich bin ein Inhaltsverzeichnis oder so etwas ähnliches
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 
 ## Voraussetzungen
@@ -33,7 +42,7 @@ Der Adapter findet automatisch die harmony Hubs im lokalen Netzwerk
 
 ##  Konfiguration
 Jede Menge Bilder
-Beschreibung der Formularfelder
+Beschreibung jedes Formularfeldes
 
 
 ## Angelgte Objekte und ihre Bedeutung
@@ -45,9 +54,16 @@ Lorem ipsum
 ### Beschreibbare States
 Lorem ipsum
 
-## Beispiele
+
+## Beispiele/Demo
 Lorem ipsum
 
+
+## Besonderheiten
+Backup
+Multihost
+History
+Performance
 
 
 ## Bekannte Probleme
@@ -58,17 +74,15 @@ Lorem ipsum
 * Verbindung zum Hub wird immer wieder unterbrochen
   Lösung:
 
-* Fehler 500
+* Fehler 500 oder Polling zu schnell
   Lösung:
-
-
-
-
 
 
 ## Entwicklerbereich
 
-### Aktivitäten
+### Allgemein
+
+#### Aktivitäten
 **Start:**
 Set the status state 'Instance.Hub_Name.activities.Activity_Name' to a Number greater than 0.
 During the activity's startup sequence the status changes from 1 (startup) to 2(running)
@@ -78,7 +92,7 @@ Set the state 'Instance.Hub_Name.activities.Activity_Name' to 0.
 Alternatively, you can set the hub's status 'Instance.activities.currentStatus' to any number.
 During the activity's exit sequence the status changes from 3 (stopping) to 0 (stopped)
 
-### Indikatoren
+#### Indikatoren
 There are two indicators 'Instance.Hub_Name.activity' and 'Instance.Hub_Name.connected'. Both are read-only, changing their values has no effect.
 
 **hubConnected**
@@ -106,22 +120,42 @@ Status of this activity. Values are the same as above.
 > Beispielcode
 
 
-### Geräte
+#### Geräte
 **Send Command**
 Set 'Instance.Hub_Name.Device_Name.command' to a number x to send command for x milliseconds.
 A value smaller than 250 probably will send the command only once.
 After sending the state will be set to 0 again.
 
 
-## Blockley
+### Blockley
 Lorem ipsum
 
-## Node-Red
+### Node-Red
 Lorem ipsum
 
+
+### vis
+Lorem ipsum
+
+
+## History
+Lorem ipsum
+
+
+## Links
+Irgendwo kommen auch noch Links zu GitHub (Entwicklerbereich?) und
+externen Ressourcen? Aber bitte nicht gleich am Doku-Anfang, eher am Ende.
+Zuerst die leichte Kost.
 
 
 ----------
+
+==================================================
+==================================================
+==================================================
+==================================================
+==================================================
+
 
 
 ##### Table of Contents
