@@ -1,6 +1,6 @@
 <img src="media/harmony.png" width=150 hight=150 />
 
-# Harmony
+# Harmony Hub
 
 ## Vorbemerkung
 Der Logitech Harmony Hub ermöglicht über eine passende Fernbedienung oder App
@@ -56,13 +56,13 @@ Eine Instanz des Adapters wird über den Admin installiert.
 
 Dazu wird unter der Rubrik "Adapter" die Kachel für den Harmony Adapter gesucht.
 
-<img src="media/adapter_harmony_install_01.png">
-
 Auf dieser Kachel wird auf das Icon für die erweiterten Einstellungen geklickt.
 
-<img src="media/adapter_harmony_install_02.png">
+<img src="media/adapter_harmony_install_01.png">
 
 und in diesen Einstellungen auf das (+) zum Erstellen einer Instanz.
+
+<img src="media/adapter_harmony_install_02.png">
 
 Es öffnet sich ein Installationsfenster in dem der Fortschritt der Installation
 durch die Anzeige der ablaufenden Befehlsfolgen angezeigt wird.
