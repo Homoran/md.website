@@ -51,7 +51,7 @@ Beschreibung jedes Formularfeldes
 
 
 ## Angelegte Objekte und ihre Bedeutung
-<img src="media/adapter_harmony_objects" width=150 hight=150 />
+<img src="media/adapter_harmony_objects.png" width=150 hight=150 />
 
 ### Lesbare States
 Lorem ipsum
