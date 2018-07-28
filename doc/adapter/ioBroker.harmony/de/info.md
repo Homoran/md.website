@@ -63,7 +63,7 @@ Beschreibung jedes Formularfeldes
 
 
 ## Angelegte Objekte und ihre Bedeutung
-<img src="media/adapter_harmony_objects_800.png">
+<img src="media/adapter_harmony_objects_small.png">
 
 Die Struktur und ihre Funktionen sind wie folgt:
 
