@@ -3,7 +3,7 @@
 # Harmony
 
 ## Vorbemerkung
-Der Logitech Harmony Hub ermöglichtüber eine passende Fernbedienung oder App
+Der Logitech Harmony Hub ermöglicht über eine passende Fernbedienung oder App
 eine Vielzahl von Unterhaltungs- und Smart Home-Geräten zu steuern.
 Damit kann man Programme wechseln, die Lautstärke regulieren bis hin zum
 Programmieren von Favoriten, Steuern der Beleuchtung und anderer Smart-Geräte. 
