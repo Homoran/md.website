@@ -51,7 +51,7 @@ Beschreibung jedes Formularfeldes
 
 
 ## Angelegte Objekte und ihre Bedeutung
-<img src="media/adapter_harmony_objects.png" width=150 hight=150 />
+<img src="media/adapter_harmony_objects.png" width=800 hight=600 />
 
 ### Lesbare States
 Lorem ipsum
@@ -59,35 +59,8 @@ Lorem ipsum
 ### Beschreibbare States
 Lorem ipsum
 
-
-## Beispiele/Demo
-Lorem ipsum
-
-
-## Besonderheiten
-Backup
-Multihost
-History
-Performance
-
-
-## Bekannte Probleme
-
-* Hub wird nicht gefunden
-  Lösung:
-
-* Verbindung zum Hub wird immer wieder unterbrochen
-  Lösung:
-
-* Fehler 500 oder Polling zu schnell
-  Lösung:
-
-
-## Entwicklerbereich
-
-### Allgemein
-
-#### Aktivitäten
+#### Bedeutung der States
+##### activities
 **Start:**
 Set the status state 'Instance.Hub_Name.activities.Activity_Name' to a Number greater than 0.
 During the activity's startup sequence the status changes from 1 (startup) to 2(running)
@@ -130,6 +103,35 @@ Status of this activity. Values are the same as above.
 Set 'Instance.Hub_Name.Device_Name.command' to a number x to send command for x milliseconds.
 A value smaller than 250 probably will send the command only once.
 After sending the state will be set to 0 again.
+
+
+## Beispiele/Demo
+Lorem ipsum
+
+
+## Besonderheiten
+Backup
+Multihost
+History
+Performance
+
+
+## Bekannte Probleme
+
+* Hub wird nicht gefunden
+  Lösung:
+
+* Verbindung zum Hub wird immer wieder unterbrochen
+  Lösung:
+
+* Fehler 500 oder Polling zu schnell
+  Lösung:
+
+
+## Entwicklerbereich
+
+### Allgemein
+
 
 
 ### Blockley
