@@ -53,6 +53,42 @@ Beschreibung jedes Formularfeldes
 ## Angelegte Objekte und ihre Bedeutung
 <img src="media/adapter_harmony_objects_800.png">
 
+Die Struktur und ihre Funktionen sind wie folgt:
+
+**Instanz**
+
+mehrere Instanzen sind bei diesem Adapter nicht erlaubt
+
+
+   **Hub Name**
+   
+   Name des Hubs
+   
+   
+      **Gerät**
+      
+      Hier erscheinen alle am Harmony-Hub angelernten Geräte
+      
+         
+         **Funktion**
+         
+         Die zur Verfügung stehenden Funktionen hängen von dem entsprechenden Gerät ab
+         
+      
+      **Aktivität**
+      
+      Hier erscheinen alle am Harmony Hub programmierten Aktivitäten
+      
+      
+         **Funktion**
+         
+         Instance.Hub_Name.activity zeigt die aktuell gewählte Aktivität an - Nur Lesen
+         
+         Instance.Hub_Name.connected zeigt an, ob der Hub mit ioBroker verbunden ist - Nur Lesen
+
+
+
+
 ### Lesbare States
 Lorem ipsum
 
