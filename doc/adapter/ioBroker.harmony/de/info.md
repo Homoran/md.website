@@ -36,10 +36,11 @@ fernsteuern sowie den Status von Aktivitäten abfragen.
 
 
 ## Steckbrief
-
+|  |  |
+| --- | :---: |
 | aktuelle Version stable| link und logo npm |
 | aktuelle Version latest | link und logo npm      |
-| OS| Linux, Windows; OS X | (hoffe ich) |
+| OS| Linux, Windows; OS X (hoffe ich) |
 | node-Version | >= 4.x |
 | Entwickler | Pmant |
 | Lizenz | MIT |
