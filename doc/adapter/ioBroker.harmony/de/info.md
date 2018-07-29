@@ -73,11 +73,11 @@ Mit dem Logitech Harmony Hub kann man Programme wechseln, die Lautstärke reguli
 
 Der Harmony Hub ist kompatibel mit mehr als 270.000 Entertainment- und Smart Home-Geräten. Dazu gehören Fernseher und Kabelboxen, Disc-Player und Spielkonsolen bis hin zu AV-Receivern und Streaming-Media-Playern sowie intelligente Beleuchtung, Schlösser, Thermostate und vieles mehr.
 
-1. Der Logitech Harmony Hub verbinden sich mit Ihrem Heimnetzwerk über WLAN. 
-2. Harmony Hubs unterstützen keine Ethernet-Kabelverbindungen.
-3. Das WLAN 2,4 GHz-Frequenzband wird vom Hub unterstützt. Das 5 
+1. Der Logitech Harmony Hub verbindet sich mit dem Heimnetzwerk über WLAN. 
+2. Harmony Hubs haben keinen Ethernet-Anschluss.
+3. DerHub unterstützt nur das WLAN 2,4 GHz-Frequenzband wird vom . Das 5 
    GHz-Frequenzband wird nicht unterstützt.
-5. Bitte einen 802.11 g/n-Router verwenden. 802.11 a/b wird nicht unterstützt.
+5. Es sollte ein 802.11 g/n-Router verwendet werden. 802.11 a/b wird nicht unterstützt.
 6. Als Verschlüsselung wird vom Hub WEP 64/128, WPA Personal und WPA2-AES unterstützt.
 7. UPnP muss für die Harmony nicht aktiviert sein, damit die Harmony-App den 
    Hub erkennen und mit ihm interagieren kann. Hingegen muss es aktiviert sein,
