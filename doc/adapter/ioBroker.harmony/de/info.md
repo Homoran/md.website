@@ -1,25 +1,18 @@
 ---
 path: "{hier der  Pfad z.B. /Schnittstellen/(<Kategorie>/<Adapter>}"
 date: "2018-07-29"
-title: "Harmony"
+title: "Logitech Harmony"
+adapter: "iobroker.harmony"
 ---
 
-# <img src="media/harmony.png" width=150 hight=150/>&emsp;Harmony
-Der Harmony-Adapter ermöglicht die einfache Einbindung des Logitech Harmony 
-Hubs mit all seinen Möglichkeiten in das ioBroker-System. Mit dem Logitech
-Harmony Hub können über eine passende Fernbedienung oder eine App eine Vielzahl
-von Unterhaltungs- und Smart Home-Geräten gesteuert werden. Man kann Programme
-wechseln, die Lautstärke regulieren, Favoriten festlegen sowie Beleuchtung und
-anderer Smart-Geräte steuern. Das Highlight des Systems ist das Erstellen von
-Aktionen zur Steuerung von mehreren Geräten mit nur einem Tastendruck.
+# <img src="media/harmony.png" width=150 hight=150/>&emsp;Logitech Harmony-Adapter
+Der Logitech Harmony-Adapter ermöglicht die einfache Einbindung von einen
+oder mehreren Logitech Harmony Hubs in ein ioBroker-System. 
 
-Der Harmony Hub ist kompatibel mit mehr als 270.000 Entertainment- und
-Smart Home-Geräten. Dazu gehören Fernseher und Kabelboxen, Disc-Player und
-Spielkonsolen bis hin zu AV-Receivern und Streaming-Media-Playern sowie
-intelligente Beleuchtung, Schlösser, Thermostate und vieles mehr.
-
-Mit dem ioBroker kann man über den Harmony Hub Aktivitäten starten und beenden, 
-deren Status abfragen sowie Geräte durch virtuelle Tastendrücke fernsteuern.
+Mit Hilfe des Logitech Harmony Hubs kann eine Vielzahl von Unterhaltungs- und
+Smart Home-Geräten gesteuert werden. Mit dem ioBroker kann man über den Hub 
+Aktivitäten starten und beenden, deren Status abfragen sowie Geräte durch 
+virtuelle Tastendrücke fernsteuern.
 
 
 ![Harmony Hub](media/harmony_850.jpg "Logitech Harmony Hub mit 
@@ -32,7 +25,7 @@ Harmony Elite Fernbedienung") <span style="color:grey">
 | Navigation                          |
 |-------------------------------------|
 | 1  [Steckbrief](#steckbrief)        |  
-| 2  [Anmerkungen](#anmerkungen)      |
+| 2  [Grundlagen](#grundlagen)        |
 | 3  [Installation](#installation)    |
 | 4  [Konfiguration](#konfiguration)  |
 | 5  [Objekte](#objekte)              |
@@ -41,8 +34,8 @@ Harmony Elite Fernbedienung") <span style="color:grey">
 | 8  [Besonderheiten](#besonderheiten)|
 | 9  [FAQ](#faq)                      |
 | 10 [Beispiele](#beispiele)          |
-| 11 [Informationen](#informationen)  |
-| 12 [Historie](#historie)  |
+| 11 [Links](#links)                  |
+| 12 [Historie](#historie)            |
 </p></details>
 
 
@@ -50,9 +43,10 @@ Harmony Elite Fernbedienung") <span style="color:grey">
 <a name="steckbrief"/>
 
 ## Steckbrief
->Achtung! Die folgende Tabelle dient nur als Beispiel. Sie wird vom 
-Dokumentengenerator dynamisch erzeugt und an dieser Stelle eingefügt. 
-Datenquellen sind `frontmatter`, `io-package.json` und `package.jason`.
+> Achtung! Die folgende Tabelle dient nur als Beispiel. Sie wird vom 
+  Dokumentengenerator dynamisch erzeugt und an dieser Stelle eingefügt. 
+  Datenquellen sind `frontmatter`, `io-package.json` und `package.json`.
+  Eventuell gehört der Stecjbrieg auch an das Dokumentenende.
 
 |                         |                          |
 |-------------------------|:------------------------:|
@@ -66,12 +60,18 @@ Datenquellen sind `frontmatter`, `io-package.json` und `package.jason`.
 | Lizenz                  | MIT                      |
 | Kategorie               | Multimedia               |
 | Keywords                | Logitech, Fernbedienung  |
+| Abhängigkeiten          | `serial.io` `lib-usb`    |          
 
 
+<a name="grundlagen"/>
 
-<a name="anmerkungen"/>
+## Grundlagen
 
-## Anmerkungen
+### Logitech Harmony
+
+Mit dem Logitech Harmony Hub kann man Programme wechseln, die Lautstärke regulieren, Favoriten festlegen sowie Beleuchtung und anderer Smart-Geräte steuern. Das Highlight des Systems ist das Erstellen von Aktionen zur Steuerung von mehreren Geräten mit nur einem Tastendruck.
+
+Der Harmony Hub ist kompatibel mit mehr als 270.000 Entertainment- und Smart Home-Geräten. Dazu gehören Fernseher und Kabelboxen, Disc-Player und Spielkonsolen bis hin zu AV-Receivern und Streaming-Media-Playern sowie intelligente Beleuchtung, Schlösser, Thermostate und vieles mehr.
 
 1. Der Logitech Harmony Hub verbinden sich mit Ihrem Heimnetzwerk über WLAN. 
 2. Harmony Hubs unterstützen keine Ethernet-Kabelverbindungen.
@@ -80,11 +80,16 @@ Datenquellen sind `frontmatter`, `io-package.json` und `package.jason`.
 5. Bitte einen 802.11 g/n-Router verwenden. 802.11 a/b wird nicht unterstützt.
 6. Als Verschlüsselung wird vom Hub WEP 64/128, WPA Personal und WPA2-AES unterstützt.
 7. UPnP muss für die Harmony nicht aktiviert sein, damit die Harmony-App den 
-   Hub erkennen und mit ihm interagieren kann. Hingegen muss es aktiviert sein, 
-   damit der Hub andere Geräte im Netzwerk erkennen und mit ihnen zusammenarbeiten 
+   Hub erkennen und mit ihm interagieren kann. Es aktiviert sein, damit der Hub 
+   andere Geräte im Netzwerk erkennen und mit ihnen zusammenarbeiten 
    kann, beispielsweise Philips hue, Sonos, Nest, Roku oder Smart TVs.
-8. Maximale Geräteanzahl: 8 Geräte
+8. Maximale Geräteanzahl: 8 Geräte. 15 Geräte, wenn als Ferbedienung ein Harmony Touch 
+   oder Ultimate one am Hub registriert ist.
 9. Maximale Anzahl an bevorzugten Kanälen: 50 bevorzugte Kanäle pro mobiles Gerät.
+
+### Adapter
+
+> Hier was tolles zum Adapter. Rainer?
 
 
 
@@ -286,6 +291,7 @@ Performance
 <a name="faq"/>
 
 ## FAQ
+>Im Forum nach häufig auftretenden Fragen suchen und hier Referenzantwort geben
 
 1. Hub wird nicht gefunden  
    Lösung:
@@ -303,31 +309,43 @@ Performance
 ## Beispiele
 
 ### JavaScript
-Lorem ipsum
+> Beispiele
+> Exporte zum Weiterverwenden
+> Code-Fragmente
 
 ### Blockly
-Lorem ipsum
+> zugehörige Blockley-Elemente
+> Beispiele
+> Exporte zum Weiterverwenden
 
 ### Node-Red
-Lorem ipsum
+> zugehörige node-red-Elemente
+> Beispiele
+> Exporte zum Weiterverwenden
 
 ### vis
-Lorem ipsum
+> zugehörige vis-Elemente
+> Beispiele
+> Exporte zum Weiterverwenden
+> Code-Fragmente
 
 
 
-<a name="informationen"/>
+<a name="linksn"/>
 
-## Weiterführende Informationen
-Lorem ipsum
+## Links
+> Referenzen auf andere Dokumente im ioBroker-Portal
+> Weblinks z.B. zum Hersteller
+> GitHub-Links
+
 
 
 <a name="historie"/>
 
 ## Historie
-> T: Achtung! Der folgende Text dient nur als Platzhalter. Die Historie wird  
-   vom Dokumentengenerator dynamisch erzeugt und hier eingefügt. Datenquelle
-   ist io-package.json -> common.news in der jeweiligen Doku-Sprache
+> Der folgende Text dient nur als Platzhalter. Die Historie wird  
+  vom Dokumentengenerator dynamisch erzeugt und hier eingefügt. Datenquelle
+  ist io-package.json -> common.news in der jeweiligen Doku-Sprache
 
 | Version | Änderung                                  |
 |:-------:|:------------------------------------------|
