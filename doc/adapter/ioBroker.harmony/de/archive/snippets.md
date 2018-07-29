@@ -43,6 +43,12 @@ Danach öffnet sich das Konfigurationsfenster der Instanz.
 
 
 
+> T: Ich bin der Auffassung, dass eine Standardinstallation eines Adapters in einem 
+  zentralen Artikel ausführlich beschrieben wird. Beim einzelnen Adapter wird (immer) 
+  auf diesen zentralen Artikel verwiesen. Nur Abweichungen vom Standardverfahren 
+  werden hier dokumentiert. Das spart Platz und Aufwand.
+
+
 
 
 
