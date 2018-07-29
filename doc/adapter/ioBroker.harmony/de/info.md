@@ -67,7 +67,7 @@ Harmony Elite Fernbedienung") <span style="color:grey">
 
 ## Überblick
 
-### Logitech Harmony
+### Der Logitech Harmony Hub
 
 Mit dem Logitech Harmony Hub kann man Programme wechseln, die Lautstärke regulieren, Favoriten festlegen sowie Beleuchtung und anderer Smart-Geräte steuern. Das Highlight des Systems ist das Erstellen von Aktionen zur Steuerung von mehreren Geräten mit nur einem Tastendruck.
 
@@ -75,7 +75,7 @@ Der Harmony Hub ist kompatibel mit mehr als 270.000 Entertainment- und Smart Hom
 
 1. Der Logitech Harmony Hub verbindet sich mit dem Heimnetzwerk über WLAN. 
 2. Harmony Hubs haben keinen Ethernet-Anschluss.
-3. DerHub unterstützt nur das WLAN 2,4 GHz-Frequenzband wird vom . Das 5 
+3. Der Hub unterstützt nur das WLAN 2,4 GHz-Frequenzband wird vom . Das 5 
    GHz-Frequenzband wird nicht unterstützt.
 5. Es sollte ein 802.11 g/n-Router verwendet werden. 802.11 a/b wird nicht unterstützt.
 6. Als Verschlüsselung wird vom Hub WEP 64/128, WPA Personal und WPA2-AES unterstützt.
