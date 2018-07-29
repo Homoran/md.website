@@ -203,6 +203,7 @@ Objekt | Bescheibung
 &emsp;&emsp;***hubBlocked***|Zeigt an, ob der Hub gerade beschäftigt ist
 &emsp;&emsp;***hubConnected***|Status der Verbindung zwischen Adapter und Hub
 
+### Funktionen
 Öffnet man ein Gerät, so erhält man eine Liste mit allen zum Gerät gehörenden
 Funktionen. Diese Funktionen sind gerätespezifisch und unterscheiden sich deshalb
 bei Geräten unterschiedlichen Typs.
@@ -218,12 +219,20 @@ eingegeben, wird vom Harmony Hub meist ein einfacher Tastendruck in der
 vorgegeben Länge ausgegeben. Größere Werte als 250ms können zur 
 Mehrfachbetätigung der Funktion führen.
 
+### Aktivitäten
 Unterhalb von `activities`werden alle am Harmony Hub programmierten Aktivitäten
 aufgelistet.
 
 ![Aktivitäten](media/a_harmony_activities.png "Aktivitäten")<span style="color:grey">  
 *Aktivitäten*</span>
 
+#### Starten
+Aktivitäten können gestartet werden, indem man bei der zu startenden Aktivität 
+eine Zahl größer als 0 einträgt. Während der Ausführung der Aktivität ändert sich
+diese Zahl zuerst nach 1 (=startend) und dann nach 2 (=aktiv).
+
+#### Stoppen
+Laufende Aktivitäten können gestoppt werden, wenn man ihren Wert auf 0 setzt.
 
 
 
@@ -231,14 +240,6 @@ aufgelistet.
 
 
 
-
-
-
-
-#### activities
-**Start:**
-Set the status state 'Instance.Hub_Name.activities.Activity_Name' to a Number greater than 0.
-During the activity's startup sequence the status changes from 1 (startup) to 2(running)
 
 **Stop:**  
 
@@ -248,12 +249,6 @@ During the activity's startup sequence the status changes from 1 (startup) to 2(
 
 #### Indikatoren
 There are two indicators 'Instance.Hub_Name.activity' and 'Instance.Hub_Name.connected'. Both are read-only, changing their values has no effect.
-
-**hubConnected**
-Tells you whether the adapter is successfully connected to the hub.
-
-**.hubBlocked**
-Is set to true if Hub is busy starting/stopping activities or sending commands.
 
 **activities.currentActivity**
 Gives you the name of the currently running activity.
@@ -344,14 +339,24 @@ Performance
 ## Beispiele
 
 ### JavaScript
-> Beispiele
-> Exporte zum Weiterverwenden
-> Code-Fragmente
+
+```javascript
+if (getState("hm-rpc.0.MEQ01234567.2.STATE").val == true) {
+  setState("harmony.0.Harmony Hub.Denon AV-Empfänger.PowerOn"/*Denon AV-Empfänger:PowerOn*/, '1', true);
+  // Bei Kontrolle Schalter == AN keine Verzögerung Schalter
+} else if (getState("hm-rpc.0.MEQ01234567.2.STATE").val == false) {
+  // Bei Kontrolle Schalter == AUS schalte mit Verzögerung
+  var timeout = setTimeout(function () {
+    setState("harmony.0.Harmony Hub.Denon AV-Empfänger.PowerOn"/*Denon AV-Empfängerr:PowerOn*/, '1', true);
+  }, 1000);
+}
+```
 
 ### Blockly
-> zugehörige Blockley-Elemente
-> Beispiele
-> Exporte zum Weiterverwenden
+![Blockly](media/a_hamony_simple_blockly.jpg "Blockly")<span style="color:grey">  
+*Blockly*</span>
+
+[Quelltext][blockly]
 
 ### Node-Red
 > zugehörige node-red-Elemente
@@ -393,3 +398,4 @@ Performance
 
 
 [logo]: https://badge.fury.io/js/svgo.svg "npm logo"
+[blockly]: media/a_harmony_blockly.xml "Blockly"
