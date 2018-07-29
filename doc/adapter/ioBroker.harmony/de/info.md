@@ -25,7 +25,7 @@ Harmony Elite Fernbedienung") <span style="color:grey">
 | Navigation                          |
 |-------------------------------------|
 | 1  [Steckbrief](#steckbrief)        |  
-| 2  [Grundlagen](#grundlagen)        |
+| 2  [Überblick](#überblick)          |
 | 3  [Installation](#installation)    |
 | 4  [Konfiguration](#konfiguration)  |
 | 5  [Objekte](#objekte)              |
@@ -63,9 +63,9 @@ Harmony Elite Fernbedienung") <span style="color:grey">
 | Abhängigkeiten          | `serial.io` `lib-usb`    |          
 
 
-<a name="grundlagen"/>
+<a name="überblick"/>
 
-## Grundlagen
+## Überblick
 
 ### Logitech Harmony
 
@@ -80,8 +80,8 @@ Der Harmony Hub ist kompatibel mit mehr als 270.000 Entertainment- und Smart Hom
 5. Bitte einen 802.11 g/n-Router verwenden. 802.11 a/b wird nicht unterstützt.
 6. Als Verschlüsselung wird vom Hub WEP 64/128, WPA Personal und WPA2-AES unterstützt.
 7. UPnP muss für die Harmony nicht aktiviert sein, damit die Harmony-App den 
-   Hub erkennen und mit ihm interagieren kann. Es aktiviert sein, damit der Hub 
-   andere Geräte im Netzwerk erkennen und mit ihnen zusammenarbeiten 
+   Hub erkennen und mit ihm interagieren kann. Hingegen muss es aktiviert sein,
+   damit der Hub andere Geräte im Netzwerk erkennen und mit ihnen zusammenarbeiten
    kann, beispielsweise Philips hue, Sonos, Nest, Roku oder Smart TVs.
 8. Maximale Geräteanzahl: 8 Geräte. 15 Geräte, wenn als Ferbedienung ein Harmony Touch 
    oder Ultimate one am Hub registriert ist.
