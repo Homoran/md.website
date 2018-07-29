@@ -2,37 +2,45 @@
 
 # "Textkonserve:"
 
-Der Harmony Hub verwandelt Ihr Smartphone oder Tablet in eine Universalfernbedienung zum Steuern von Unterhaltungs- und Smart Home-Geräten. Sie haben die Möglichkeit zum Wechseln von Programmen, Regulieren der Lautstärke, Programmieren von Favoriten, Steuern der Beleuchtung und anderer Smart-Geräte sowie zum Erstellen von Aktionen für mehrere Geräte.
+<a name="installation"/>
 
-Harmony Hub ist kompatibel mit mehr als 270.000 Entertainment- und Smart Home-Geräten. So lassen sich Geräte verschiedener Marken sofort per Touch bedienen. Von Fernsehern und Kabelboxen über Disc-Player und Spielkonsolen bis hin zu AV-Receivern und Streaming-Media-Playern sowie intelligente Beleuchtung, Schlösser, Thermostate und mehr – Harmony Hub ist mit nahezu allen Geräten kompatibel.
+## Installation
+> T: Ich bin der Auffassung, dass eine Standardinstallation eines Adapters in einem 
+  zentralen Artikel ausführlich beschrieben wird. Beim einzelnen Adapter wird (immer) 
+  auf diesen zentralen Artikel verwiesen. Nur Abweichungen vom Standardverfahren 
+  werden hier dokumentiert. Das spart Platz und Aufwand.
 
-Jalousien herunterlassen, Beleuchtung dimmen und den Fernseher für den Filmabend einschalten: all das mit einem Fingertipp. Mit Harmony Activities kommen Sie in den Genuss von Automatisierung mit einem Fingertipp für unzählige Einsatzmöglichkeiten. Harmony schlägt automatisch alltägliche Aktivitäten vor oder Sie erstellen Ihre eigenen nach Lust und Laune. Schlafenszeit? Tippen Sie auf „Gute Nacht“, um vor dem Schlafengehen die Tür zu verriegeln und die Beleuchtung zu dimmen.
+Eine Instanz des Adapters wird über den Admin installiert.
+
+Dazu wird unter der Rubrik "Adapter" die Kachel für den Harmony Adapter gesucht.
+
+Auf dieser Kachel wird auf das Icon für die erweiterten Einstellungen geklickt.
+
+![Testbild 01](media/adapter_harmony_install_01.png)<span style="color:grey">  
+*Admin Oberfläche*</span>
 
 
-https://www.logitech.com/de-de/product/harmony-hub
+und in diesen Einstellungen auf das (+) zum Erstellen einer Instanz.
+
+![Testbild 02](media/adapter_harmony_install_02.png)<span style="color:grey">  
+*Testbild 2*</span>
+
+Es öffnet sich ein Installationsfenster in dem der Fortschritt der Installation
+durch die Anzeige der ablaufenden Befehlsfolgen angezeigt wird.
+
+![Testbild 03](media/adapter_harmony_install_03.png)<span style="color:grey">  
+*Testbild 3*</span>
+
+Nach vollendeter Installation schließt sich das Fenster standardmäßig von selbst.
+
+![Testbild 04](media/adapter_harmony_install_04.png)<span style="color:grey">  
+*Testbild 4*</span>
+
+Danach öffnet sich das Konfigurationsfenster der Instanz.
 
 
-Systemvoraussetzungen
 
-Getestet mit Harmony Hub, Artikelnummer: 915-000262, Modellnummer: O-R0004
 
-Produktkategorie: Harmony-Fernbedienungen
-
-Funkprotokoll: WLAN 2,4 GHz
-                Bluetooth 3.0
-
-WLAN VOraussetzungen
-Harmony Ultimate Hub und Home Hub verbinden sich mit Ihrem Heimnetzwerk über WLAN. Harmony Hubs unterstützen keine Ethernet-Kabelverbindungen.
-
-    WLAN 2,4 GHz-Frequenzband wird unterstützt.  (5 GHz-Frequenzband wird nicht unterstützt)
-    802.11 g/n-Router  (802.11 a/b wird nicht unterstützt)
-    Verschlüsselung: WEP 64/128, WPA Personal und WPA2-AES
-
-UPnP muss für die Harmony nicht aktiviert sein, damit die Harmony-App den Hub erkennen und mit ihm interagieren kann. Hingegen muss es aktiviert sein, damit der Hub andere Geräte im Netzwerk erkennen und mit ihnen zusammenarbeiten kann, beispielsweise Philips hue, Sonos, Nest, Roku oder Smart TVs.
-
-Maximale Geräteanzahl: 8 Geräte
-
-Maximale Anzahl an bevorzugten Kanälen: 50 bevorzugte Kanäle pro mobiles Gerät.
 
 
 
