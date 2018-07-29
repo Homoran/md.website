@@ -52,7 +52,7 @@ Harmony Elite Fernbedienung") <span style="color:grey">
 ## Steckbrief
 >Achtung! Die folgende Tabelle dient nur als Beispiel. Sie wird vom 
 Dokumentengenerator dynamisch erzeugt und an dieser Stelle eingefügt. 
-Datenquellen sind `frontmatter`, `io-package.json` und `package.jason`.
+Datenquellen sind `frontmatter`, `io-package.json` und `package.json`.
 
 |                         |                          |
 |-------------------------|:------------------------:|
@@ -104,7 +104,6 @@ Auf dieser Kachel wird auf das Icon für die erweiterten Einstellungen geklickt.
 
 ![Testbild 01](media/adapter_harmony_install_01.png)<span style="color:grey">  
 *Admin Oberfläche*</span>
-
 
 und in diesen Einstellungen auf das (+) zum Erstellen einer Instanz.
 
