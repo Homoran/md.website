@@ -6,8 +6,8 @@ title: "Harmony"
 
 # <img src="media/harmony.png" width=150 hight=150/>&emsp;Harmony
 Der Harmony-Adapter ermöglicht die einfache Einbindung des Logitech Harmony 
-Hubs mit all seinen Möglichkeiten in das ioBroker-System. Mit dem Logitech
-Harmony Hub können über eine passende Fernbedienung oder eine App eine Vielzahl
+Hubs in das ioBroker-System. Mit Hilfe des Logitech Harmony Hubs kann
+über den ioBroker, einer Fernbedienung oder einer App eine Vielzahl
 von Unterhaltungs- und Smart Home-Geräten gesteuert werden. Man kann Programme
 wechseln, die Lautstärke regulieren, Favoriten festlegen sowie Beleuchtung und
 anderer Smart-Geräte steuern. Das Highlight des Systems ist das Erstellen von
