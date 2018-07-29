@@ -25,13 +25,13 @@ deren Status abfragen sowie Geräte durch virtuelle Tastendrücke fernsteuern.
 "Logitech Harmony Hub mit 
 Harmony Elite Fernbedienung") *Logitech Harmony Hub mit Harmony Elite Fernbedienung*
 
-<details><summary>## Inhaltsverzeichnis</summary>
-<p>
+
+<details><summary>## Inhaltsverzeichnis</summary><p>
 
 | Navigation                          |
 |-------------------------------------|
 | 1  [Steckbrief](#steckbrief)        |  
-| 2  [Steckbrief](#steckbrief)        |
+| 2  [Anmerkungen](#anmerkungen)      |
 | 3  [Installation](#installation)    |
 | 4  [Konfiguration](#konfiguration)  |
 | 5  [Objekte](#objekte)              |
@@ -42,8 +42,7 @@ Harmony Elite Fernbedienung") *Logitech Harmony Hub mit Harmony Elite Fernbedien
 | 10 [Beispiele](#beispiele)          |
 | 11 [Informationen](#informationen)  |
 | 12 [Historie](#historie)  |
-</p>
-</details>
+</p></details>
 
 
 
@@ -69,7 +68,7 @@ Datenquellen sind `frontmatter`, `io-package.json` und `package.jason`.
 
 
 
-<a name="Anmerkungen"/>
+<a name="anmerkungen"/>
 
 ## Anmerkungen
 
@@ -304,7 +303,7 @@ Lorem ipsum
 
 ## Historie
 >Achtung! Der folgende Text dient nur als Platzhalter. Die Historie wird 
-vom Dokumentengenerator dynamisch erzeugt und hier eingefügt. Datenquellen
+vom Dokumentengenerator dynamisch erzeugt und hier eingefügt. Datenquelle
 ist io-package.json -> common.news in der jeweiligen Doku-Sprache
 
 | Version | Änderung                                  |
