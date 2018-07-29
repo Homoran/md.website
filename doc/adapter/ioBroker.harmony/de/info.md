@@ -50,7 +50,7 @@ Harmony Elite Fernbedienung") <span style="color:grey">
 <a name="steckbrief"/>
 
 ## Steckbrief
->Achtung! Die folgende Tabelle dient nur als Beispiel. Sie wird vom 
+> T: Achtung! Die folgende Tabelle dient nur als Beispiel. Sie wird vom 
 Dokumentengenerator dynamisch erzeugt und an dieser Stelle eingefügt. 
 Datenquellen sind `frontmatter`, `io-package.json` und `package.json`.
 
