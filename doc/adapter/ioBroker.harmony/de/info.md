@@ -21,12 +21,13 @@ intelligente Beleuchtung, Schlösser, Thermostate und vieles mehr.
 Mit dem ioBroker kann man über den Harmony Hub Aktivitäten starten und beenden, 
 deren Status abfragen sowie Geräte durch virtuelle Tastendrücke fernsteuern.
 
-![Harmony Hub](media/harmony_850.jpg 
-"Logitech Harmony Hub mit 
-Harmony Elite Fernbedienung") *Logitech Harmony Hub mit Harmony Elite Fernbedienung*
+
+![Harmony Hub](media/harmony_850.jpg "Logitech Harmony Hub mit 
+Harmony Elite Fernbedienung") <span style="color:grey">  
+*Logitech Harmony Hub mit Harmony Elite Fernbedienung*</span>
 
 
-<details><summary>## Inhaltsverzeichnis</summary><p>
+<details><summary>Inhaltsverzeichnis</summary><p>
 
 | Navigation                          |
 |-------------------------------------|
@@ -90,9 +91,10 @@ Datenquellen sind `frontmatter`, `io-package.json` und `package.jason`.
 <a name="installation"/>
 
 ## Installation
-> Ich bin der Meinung, dass eine Standardinstallation eines Adapters in einem Artikel
-  ausführlich dokumenteirt wird. Hier wird (immer) auf diesen Artikel verwiesen. 
-  Nur Abweichungen vom Standardverfahren werden hier dokumentiert.
+> T: Ich bin der Auffassung, dass eine Standardinstallation eines Adapters in einem 
+  zentralen Artikel ausführlich beschrieben wird. Beim einzelnen Adapter wird (immer) 
+  auf diesen zentralen Artikel verwiesen. Nur Abweichungen vom Standardverfahren 
+  werden hier dokumentiert. Das spart Platz und Aufwand.
 
 Eine Instanz des Adapters wird über den Admin installiert.
 
@@ -100,23 +102,25 @@ Dazu wird unter der Rubrik "Adapter" die Kachel für den Harmony Adapter gesucht
 
 Auf dieser Kachel wird auf das Icon für die erweiterten Einstellungen geklickt.
 
-<img src="media/adapter_harmony_install_01.png">
+![Testbild 01](media/adapter_harmony_install_01.png)<span style="color:grey">  
+*Admin Oberfläche*</span>
 
-![Harmony Hub mit Harmony Elite Fernbedienung](media/harmony_425.jpg)  
-*Testbild*
 
 und in diesen Einstellungen auf das (+) zum Erstellen einer Instanz.
 
-<img src="media/adapter_harmony_install_02.png">
+![Testbild 02](media/adapter_harmony_install_02.png)<span style="color:grey">  
+*Testbild 2*</span>
 
 Es öffnet sich ein Installationsfenster in dem der Fortschritt der Installation
 durch die Anzeige der ablaufenden Befehlsfolgen angezeigt wird.
 
-<img src="media/adapter_harmony_install_03.png">
+![Testbild 03](media/adapter_harmony_install_03.png)<span style="color:grey">  
+*Testbild 3*</span>
 
 Nach vollendeter Installation schließt sich das Fenster standardmäßig von selbst.
 
-<img src="media/adapter_harmony_install_04.png">
+![Testbild 04](media/adapter_harmony_install_04.png)<span style="color:grey">  
+*Testbild 4*</span>
 
 Danach öffnet sich das Konfigurationsfenster der Instanz.
 
@@ -125,25 +129,40 @@ Danach öffnet sich das Konfigurationsfenster der Instanz.
 <a name="konfiguration"/>
 
 ##  Konfiguration
+Der Adapter findet automatisch alle Harmony Hubs, die sich im Subnetz des 
+ioBroker-Servers befinden.
 
-Der Adapter findet automatisch die harmony Hubs im lokalen Netzwerk
 
-<img src="media/adapter_harmony_config_01.png">
+<a name="Logitech Harmony adapter settings"/>
 
-Die angezeigten Felder müssen nur ausgefüllt werden, wenn der Hub mit Usernamen und
-Passwort gesichert ist.
+### Fenster "Logitech Harmony adapter settings"
 
-Jetzt kann man das Konfigurationsfenster schließen.
+![Admin](media/a_harmony_admin.png "Admin Oberfläche")<span style="color:grey">  
+*Admin Oberfläche*</span>
+
+#### Beschreibung der Eingabefelder
+
+| Feld         | Beschreibung |
+|:-------------|:-------------|
+|**Hub User**|Für den Fall, dass Sie den Zugang zur Harmony Hub-Konfiguration mit einem Benutzer und einem Kennwort versehen haben, geben Sie bitte hier den Benutzernamen ein. Achten Sie dabei auf die Groß- und Kleinschreibung.|
+|**Hub Passwort**|Für den Fall, dass Sie den Zugang zur Harmony Hub-Konfiguration mit einem Benutzer und einem Kennwort versehen haben, geben Sie bitte hier das Kennwort ein. Achten Sie dabei auf die Groß- und Kleinschreibung.|
+
+Die beiden angezeigten Felder müssen nur ausgefüllt werden, wenn der Hub mit einem
+Benutzernamen und einem Passwort gesichert ist.
+
+Nach Abschluß der Konfiguration verlassen Sie den Konfigurationsdialog bitte 
+mit `SPEICHERN UND SCHLIEßEN`.
 
 
 
 <a name="objekte"/>
 
-## Angelegte Objekte und ihre Bedeutung
+## Objekte
 
-in der Rubrik wurde eine neue Gruppe für die Instanz (üblicherweise harmony.0) angelegt.
+In der Rubrik wurde eine neue Gruppe für die Instanz (üblicherweise harmony.0) angelegt.
 
-<img src="media/adapter_harmony_objects_01.png">
+![Testbild 06](media/adapter_harmony_objects_01.png "Harmony Objekte")<span style="color:grey">  
+*Objekte des Harmony-Adapters*</span>
 
 Die Struktur der angelegten Objekte und ihre Funktionen sind wie folgt:
 
@@ -182,10 +201,9 @@ mehrere Instanzen sind bei diesem Adapter nicht erlaubt
 
 <a name="states"/>
 
-#### Bedeutung der States
-(in die Struktur oben einbinden!)
+## States
 
-##### activities
+#### activities
 **Start:**
 Set the status state 'Instance.Hub_Name.activities.Activity_Name' to a Number greater than 0.
 During the activity's startup sequence the status changes from 1 (startup) to 2(running)
@@ -230,6 +248,11 @@ After sending the state will be set to 0 again.
 <a name="deinstallation"/>
 
 ## Deinstallation
+> T: Ich bin der Meinung, dass eine Standarddeinstallation eines Adapters in einem 
+  zentralen Artikel ausführlich dokumentiert wird. Beim Adapter wird (immer) 
+  auf diesen zentralen Artikel verwiesen. Nur Abweichungen vom Standardverfahren 
+  werden hier dokumentiert.
+
 sollte die Instanz wieder entfernt werden sollen wird diese über das zugeordnete Mülleimer-Icon 
 in der Rubrik Instanzen entfernt
 
@@ -302,9 +325,9 @@ Lorem ipsum
 <a name="historie"/>
 
 ## Historie
->Achtung! Der folgende Text dient nur als Platzhalter. Die Historie wird 
-vom Dokumentengenerator dynamisch erzeugt und hier eingefügt. Datenquelle
-ist io-package.json -> common.news in der jeweiligen Doku-Sprache
+> T: Achtung! Der folgende Text dient nur als Platzhalter. Die Historie wird  
+   vom Dokumentengenerator dynamisch erzeugt und hier eingefügt. Datenquelle
+   ist io-package.json -> common.news in der jeweiligen Doku-Sprache
 
 | Version | Änderung                                  |
 |:-------:|:------------------------------------------|
