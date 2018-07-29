@@ -41,6 +41,40 @@ Danach öffnet sich das Konfigurationsfenster der Instanz.
 
 
 
+**Instanz**  
+     
+   mehrere Instanzen sind bei diesem Adapter nicht erlaubt  
+
+
+**Hub Name**
+   
+   Name des Hubs
+   
+   
+      **Gerät**
+      
+      Hier erscheinen alle am Harmony-Hub angelernten Geräte
+      
+         
+         **Funktion**
+         
+         Die zur Verfügung stehenden Funktionen hängen von dem entsprechenden Gerät ab
+         
+      
+      **Aktivität**
+      
+      Hier erscheinen alle am Harmony Hub programmierten Aktivitäten
+      
+      
+         **Funktion**
+         
+         Instance.Hub_Name.activity zeigt die aktuell gewählte Aktivität an - Nur Lesen
+         
+         Instance.Hub_Name.connected zeigt an, ob der Hub mit ioBroker verbunden ist - Nur Lesen
+
+         
+
+
 
 
 > T: Ich bin der Auffassung, dass eine Standardinstallation eines Adapters in einem 
