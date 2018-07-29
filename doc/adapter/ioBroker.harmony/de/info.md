@@ -1,56 +1,99 @@
-<img src="media/harmony.png" width=150 hight=150 />
+---
+path: "{hier der  Pfad z.B. /Schnittstellen/(<Kategorie>/<Adapter>}"
+date: "2018-07-29"
+title: "Harmony"
+---
 
-# Harmony Hub
-
-## Vorbemerkung
-Der Logitech Harmony Hub ermöglicht über eine passende Fernbedienung oder App
-eine Vielzahl von Unterhaltungs- und Smart Home-Geräten zu steuern.
-Damit kann man Programme wechseln, die Lautstärke regulieren bis hin zum
-Programmieren von Favoriten, Steuern der Beleuchtung und anderer Smart-Geräte. 
-Das Highlight des Systems ist das Erstellen von Aktionen zur Steuerung von mehreren
-Geräten mit nur einem Tastendruck.
+# <img src="media/harmony.png" width=150 hight=150/>&emsp;Harmony
+Der Harmony-Adapter ermöglicht die einfache Einbindung des Logitech Harmony 
+Hubs mit all seinen Möglichkeiten in das ioBroker-System. Mit dem Logitech
+Harmony Hub können über eine passende Fernbedienung oder eine App eine Vielzahl
+von Unterhaltungs- und Smart Home-Geräten gesteuert werden. Man kann Programme
+wechseln, die Lautstärke regulieren, Favoriten festlegen sowie Beleuchtung und
+anderer Smart-Geräte steuern. Das Highlight des Systems ist das Erstellen von
+Aktionen zur Steuerung von mehreren Geräten mit nur einem Tastendruck.
 
 Der Harmony Hub ist kompatibel mit mehr als 270.000 Entertainment- und
-Smart Home-Geräten. Von Fernsehern und Kabelboxen über Disc-Player und
+Smart Home-Geräten. Dazu gehören Fernseher und Kabelboxen, Disc-Player und
 Spielkonsolen bis hin zu AV-Receivern und Streaming-Media-Playern sowie
-intelligente Beleuchtung, Schlösser, Thermostate und mehr –
-Harmony Hub ist mit nahezu allen Geräten kompatibel.
+intelligente Beleuchtung, Schlösser, Thermostate und vieles mehr.
+
+Mit dem ioBroker kann man über den Harmony Hub Aktivitäten starten und beenden, 
+deren Status abfragen sowie Geräte durch virtuelle Tastendrücke fernsteuern.
+
+![Harmony Hub](media/harmony_850.jpg 
+"Logitech Harmony Hub mit 
+Harmony Elite Fernbedienung") *Logitech Harmony Hub mit Harmony Elite Fernbedienung*
+
+<details><summary>## Inhaltsverzeichnis</summary>
+<p>
+
+| Navigation                          |
+|-------------------------------------|
+| 1  [Steckbrief](#steckbrief)        |  
+| 2  [Steckbrief](#steckbrief)        |
+| 3  [Installation](#installation)    |
+| 4  [Konfiguration](#konfiguration)  |
+| 5  [Objekte](#objekte)              |
+| 6  [States](#states)                |
+| 7  [Deinstallation](#deinstallation)|
+| 8  [Besonderheiten](#besonderheiten)|
+| 9  [FAQ](#faq)                      |
+| 10 [Beispiele](#beispiele)          |
+| 11 [Informationen](#informationen)  |
+| 12 [Historie](#historie)  |
+</p>
+</details>
 
 
-## Der Adapter
 
-Dieser Adapter ermöglicht die Einbindung des Logitech Harmony Hubs mit all
-seinen Möglichkeiten in das ioBroker-System. Der ioBroker kann über den
-Harmony Hub Aktivitäten starten und beenden, Geräte durch virtuelle Tastendrücke
-fernsteuern sowie den Status von Aktivitäten abfragen.
-
-> Hier netter Screenshot zur Motivation, z.B. aus VIS oder oder oder
-
-
-### Ich bin ein Inhaltsverzeichnis oder so etwas ähnliches
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
+<a name="steckbrief"/>
 
 ## Steckbrief
-|  |  |
-| --- | :---: |
-| aktuelle Version stable| link und logo npm |
-| aktuelle Version latest | link und logo npm      |
-| OS| Linux, Windows; OS X (hoffe ich) |
-| node-Version | >= 4.x |
-| Entwickler | Pmant |
-| Lizenz | MIT |
-| Github | LINK |
-| Keywords | Logitech, Fernbedienung |
-| Kategorie | Multimedia |
-| Stand der Doku | 28.07.2018 |
+>Achtung! Die folgende Tabelle dient nur als Beispiel. Sie wird vom 
+Dokumentengenerator dynamisch erzeugt und an dieser Stelle eingefügt. 
+Datenquellen sind `frontmatter`, `io-package.json` und `package.jason`.
 
+|                         |                          |
+|-------------------------|:------------------------:|
+| Stand der Doku          | 29.07.2018               |
+| aktuelle Version stable | link und logo npm        |
+| aktuelle Version latest | link und logo npm        | 
+| OS                      | Linux, Windows; OS X     |
+| node-Version            | >= 4.x                   |
+| Entwickler              | Pmant                    |
+| Github                  | LINK                     |
+| Lizenz                  | MIT                      |
+| Kategorie               | Multimedia               |
+| Keywords                | Logitech, Fernbedienung  |
+
+
+
+<a name="Anmerkungen"/>
+
+## Anmerkungen
+
+1. Der Logitech Harmony Hub verbinden sich mit Ihrem Heimnetzwerk über WLAN. 
+2. Harmony Hubs unterstützen keine Ethernet-Kabelverbindungen.
+3. Das WLAN 2,4 GHz-Frequenzband wird vom Hub unterstützt. Das 5 
+   GHz-Frequenzband wird nicht unterstützt.
+5. Bitte einen 802.11 g/n-Router verwenden. 802.11 a/b wird nicht unterstützt.
+6. Als Verschlüsselung wird vom Hub WEP 64/128, WPA Personal und WPA2-AES unterstützt.
+7. UPnP muss für die Harmony nicht aktiviert sein, damit die Harmony-App den 
+   Hub erkennen und mit ihm interagieren kann. Hingegen muss es aktiviert sein, 
+   damit der Hub andere Geräte im Netzwerk erkennen und mit ihnen zusammenarbeiten 
+   kann, beispielsweise Philips hue, Sonos, Nest, Roku oder Smart TVs.
+8. Maximale Geräteanzahl: 8 Geräte
+9. Maximale Anzahl an bevorzugten Kanälen: 50 bevorzugte Kanäle pro mobiles Gerät.
+
+
+
+<a name="installation"/>
 
 ## Installation
+> Ich bin der Meinung, dass eine Standardinstallation eines Adapters in einem Artikel
+  ausführlich dokumenteirt wird. Hier wird (immer) auf diesen Artikel verwiesen. 
+  Nur Abweichungen vom Standardverfahren werden hier dokumentiert.
 
 Eine Instanz des Adapters wird über den Admin installiert.
 
@@ -59,6 +102,9 @@ Dazu wird unter der Rubrik "Adapter" die Kachel für den Harmony Adapter gesucht
 Auf dieser Kachel wird auf das Icon für die erweiterten Einstellungen geklickt.
 
 <img src="media/adapter_harmony_install_01.png">
+
+![Harmony Hub mit Harmony Elite Fernbedienung](media/harmony_425.jpg)  
+*Testbild*
 
 und in diesen Einstellungen auf das (+) zum Erstellen einer Instanz.
 
@@ -73,8 +119,11 @@ Nach vollendeter Installation schließt sich das Fenster standardmäßig von sel
 
 <img src="media/adapter_harmony_install_04.png">
 
-
 Danach öffnet sich das Konfigurationsfenster der Instanz.
+
+
+
+<a name="konfiguration"/>
 
 ##  Konfiguration
 
@@ -89,6 +138,7 @@ Jetzt kann man das Konfigurationsfenster schließen.
 
 
 
+<a name="objekte"/>
 
 ## Angelegte Objekte und ihre Bedeutung
 
@@ -131,7 +181,7 @@ mehrere Instanzen sind bei diesem Adapter nicht erlaubt
 
 
 
-
+<a name="states"/>
 
 #### Bedeutung der States
 (in die Struktur oben einbinden!)
@@ -151,15 +201,12 @@ There are two indicators 'Instance.Hub_Name.activity' and 'Instance.Hub_Name.con
 
 **hubConnected**
 Tells you whether the adapter is successfully connected to the hub.
-> Beispielcode
 
 **.hubBlocked**
 Is set to true if Hub is busy starting/stopping activities or sending commands.
-> Beispielcode
 
 **activities.currentActivity**
 Gives you the name of the currently running activity.
-> Beispielcode
 
 **activities.currentStatus**
 Gives you the current status of the hub.
@@ -167,11 +214,10 @@ Gives you the current status of the hub.
 - 1 = starting
 - 2 = active
 - 3 = stopping
-> Beispielcode
 
 **activities.{activity name}**
 Status of this activity. Values are the same as above.
-> Beispielcode
+
 
 
 #### Geräte
@@ -180,6 +226,9 @@ Set 'Instance.Hub_Name.Device_Name.command' to a number x to send command for x 
 A value smaller than 250 probably will send the command only once.
 After sending the state will be set to 0 again.
 
+
+
+<a name="deinstallation"/>
 
 ## Deinstallation
 sollte die Instanz wieder entfernt werden sollen wird diese über das zugeordnete Mülleimer-Icon 
@@ -202,33 +251,37 @@ in der Kachel des Harmony-Adapters in der Rubrik Adapter geschehen.
 
 
 
-
-
-## Beispiele/Demo
-Lorem ipsum
-
+<a name="besonderheiten"/>
 
 ## Besonderheiten
-Backup
-Multihost
-History
+Backup  
+Multihost  
+History  
 Performance
 
 
-## Bekannte Probleme
 
-* Hub wird nicht gefunden
-  Lösung:
+<a name="faq"/>
 
-* Verbindung zum Hub wird immer wieder unterbrochen
-  Lösung:
+## FAQ
 
-* Fehler 500 oder Polling zu schnell
-  Lösung:
+1. Hub wird nicht gefunden  
+   Lösung:
+
+2. Verbindung zum Hub wird immer wieder unterbrochen  
+   Lösung:
+
+3. Fehler 500 oder Polling zu schnell  
+   Lösung:
 
 
 
-## Einbinden der States
+<a name="beispiele"/>
+
+## Beispiele
+
+### JavaScript
+Lorem ipsum
 
 ### Blockly
 Lorem ipsum
@@ -239,20 +292,25 @@ Lorem ipsum
 ### vis
 Lorem ipsum
 
-### History
+
+
+<a name="informationen"/>
+
+## Weiterführende Informationen
 Lorem ipsum
 
 
-## Links
-Irgendwo kommen auch noch Links zu GitHub (Entwicklerbereich?) und
-externen Ressourcen? Aber bitte nicht gleich am Doku-Anfang, eher am Ende.
-Zuerst die leichte Kost.
+<a name="historie"/>
 
+## Historie
+>Achtung! Der folgende Text dient nur als Platzhalter. Die Historie wird 
+vom Dokumentengenerator dynamisch erzeugt und hier eingefügt. Datenquellen
+ist io-package.json -> common.news in der jeweiligen Doku-Sprache
 
-
-## Entwicklerbereich
-
-
-----------
-
-
+| Version | Änderung                                  |
+|:-------:|:------------------------------------------|
+|0.9.1    |Fix für problematische Zeichen             |
+|0.7.1    |Bug fixes                                  |
+|0.7.0    |Unterstützung für mehrere Hubs hinzugefügt |
+|0.6.2    |falscher Port korrigiert                   |
+|0.1.0    |Initialer commit                           |   
