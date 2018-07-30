@@ -66,17 +66,13 @@ Harmony Elite Fernbedienung") <span style="color:grey">
 | Keywords                | `harmony` `hub` `logitech` `home automation`             |
 | Abhängigkeiten          | `harmonyhubjs-client` `harmonyhubjs-discover` `semaphore`|          
 
-ioBroker",
-      "harmony",
-      "hub",
-      "logitech",
-      "home automation"
+
 
 <a name="überblick"/>
 
 ## Überblick
 
-### Logitech Harmony Hub
+### Logitech Harmony
 Logitech Harmony ist kompatibel mit mehr als 270.000 Entertainment- und Smart 
 Home-Geräten. Dazu gehören Fernseher und Kabelboxen, Disc-Player und Spielkonsolen 
 bis hin zu AV-Receivern und Streaming-Media-Playern sowie intelligente Beleuchtung,
@@ -102,14 +98,12 @@ einem Tastendruck.
    Fernbedienung mindestens ein Harmony Touch oder Ultimate one am Hub registriert ist.
 8. Die maximale Anzahl an bevorzugten Kanälen sind 50 pro mobilem Gerät.
 
-### Logitech Harmony Adapter
+### Logitech Harmony-Adapter
 Der Logitech Harmony-Adapter findet automatisch alle Logitech Harmony-Hubs, die sich 
 über eine WLAN-Verbindung zuammen mit dem ioBroker-Server im gleichen Netzwerksubnetz
 befinden.
 
-Der Harmony-Hub benötigt für die Kommunikation mit dem Adapter eine ausgezeichnete
-Funkverbindung. Ein Accesspoint in unmittelbarer räumlicher Nähe des Hubs wird 
-empfohlen.
+
 
 
 
@@ -192,16 +186,16 @@ darüber informiert, ob die Kommunikation mit dem Hub reibungslos erfolgt.
 
 Die angelegten Objekte und ihre Funktionen sind wie folgt definiert:
 
-Objekt | Bescheibung 
-:------|:-----------
-**harmony.0**        |Name der ersten *Instanz* des Logitech Harmony-Adapters
-&emsp;**Harmony Hub**|Name des *Hubs*
-&emsp;&emsp;**Apple TV Generation 3**|Name eines *Geräts*, enthält Gerätefunktionen 
-&emsp;&emsp;**Denon AV-Empfänger**|Name eines *Geräts*, enthält Gerätefunktionen 
-&emsp;&emsp;**:**|Weitere *Geräte* mit ihren Funktionen
-&emsp;&emsp;**activities**|Liste mit allen im Harmony Hub programmierten *Aktivitäten* 
-&emsp;&emsp;***hubBlocked***|Zeigt an, ob der Hub gerade beschäftigt ist
-&emsp;&emsp;***hubConnected***|Status der Verbindung zwischen Adapter und Hub
+Objekt | Zugriff | Bescheibung 
+:------|:-------:|:-----------
+**harmony.0** | R | Name der ersten *Instanz* des Logitech Harmony-Adapters
+&emsp;**Harmony Hub**| R | Name des *Hubs*
+&emsp;&emsp;**Apple TV Generation 3**| R | Name eines *Geräts*, enthält Gerätefunktionen 
+&emsp;&emsp;**Denon AV-Empfänger**| R | Name eines *Geräts*, enthält Gerätefunktionen 
+&emsp;&emsp;**:**| R | Weitere *Geräte* mit ihren Funktionen
+&emsp;&emsp;**activities**| R | Liste mit allen im Harmony Hub programmierten *Aktivitäten* 
+&emsp;&emsp;***hubBlocked***| R | Zeigt an, ob der Hub gerade beschäftigt ist
+&emsp;&emsp;***hubConnected***| R | Status der Verbindung zwischen Adapter und Hub
 
 ### Funktionen
 Öffnet man ein Gerät, so erhält man eine Liste mit allen zum Gerät gehörenden
@@ -211,13 +205,17 @@ bei Geräten unterschiedlichen Typs.
 ![Gerät](media/a_harmony_geraet.png "Harmony Gerät")<span style="color:grey">  
 *Funktionen eines Geräts*</span>
 
-Jede Funktion löst die entsprechende Reaktion des angesprochenen Geräts aus. Das
-kann man testen, in dem man mit dem Mauszeiger die Glocke rechts der Funktion
-betätigt. Alternativ kann man mit dem Stiftsymbol auch einen Wert eintragen. 
+#### Auslösen einer Funktion
+Jede Funktion `{Instanz}.{Hub Name}.{Gerät}.{Funktion}` löst eine entsprechende
+Reaktion des angesprochenen Geräts aus. Das kann man testen, in dem man mit dem
+Mauszeiger die Glocke rechts der Funktion betätigt. Alternativ kann man mit dem
+Stiftsymbol dort auch einen Wert eintragen. 
 Werte haben die Einheit `Millisekunden`. Wird ein Wert zwischen 1 und 250ms
 eingegeben, wird vom Harmony Hub meist ein einfacher Tastendruck in der 
 vorgegeben Länge ausgegeben. Größere Werte als 250ms können zur 
 Mehrfachbetätigung der Funktion führen.
+Nach dem Auslöseng der Funktion ändert sich der Wert wieder auf 0.
+
 
 ### Aktivitäten
 Unterhalb von `activities`werden alle am Harmony Hub programmierten Aktivitäten
@@ -226,57 +224,32 @@ aufgelistet.
 ![Aktivitäten](media/a_harmony_activities.png "Aktivitäten")<span style="color:grey">  
 *Aktivitäten*</span>
 
-#### Starten
-Aktivitäten können gestartet werden, indem man bei der zu startenden Aktivität 
-eine Zahl größer als 0 einträgt. Während der Ausführung der Aktivität ändert sich
-diese Zahl zuerst nach 1 (=startend) und dann nach 2 (=aktiv).
+#### Starten einer Aktivität
+Aktivitäten werden gestartet, wenn man bei einer Aktivität 
+`{Instanz}.{Hub Name}.activities.{Aktivität}` eine Zahl größer als 0 einträgt. 
+Während der Ausführung der Aktivität ändert sich dieser Wert zuerst 
+nach 1 (=startend) und dann nach 2 (=aktiv).
 
-#### Stoppen
-Laufende Aktivitäten können gestoppt werden, wenn man ihren Wert auf 0 setzt.
+#### Beenden einer Aktivität
+Laufende Aktivitäten können gestoppt werden, in dem man ihren Wert auf 0 setzt.
+Alternativ kann man zum Beenden einer Aktivität im Objekt 
+`{Instanz}.{Hub Name}.activities.currentStatus` eine beliebige Zahl eintragen. 
+Während des Beendens der Aktivität ändert sich `currentStatus` von 3 (=beendend)
+auf 0 (=inaktiv).
 
+#### Weitere Statuswerte
+`{Instanz}.{Hub Name}.activities.currentActivity` liefert die aktuell ausgeführte
+Aktivität als Zeichenfolge.
 
+`{Instanz}.{Hub Name}.activities.currentStatus` zeigt den Status des Harmony Hubs 
+an. Dabei bedeuten die Werte
+- 0 = inaktiv
+- 1 = startend
+- 2 = aktive
+- 3 = beendend
 
-
-
-
-
-
-**Stop:**  
-
-    Set the state 'Instance.Hub_Name.activities.Activity_Name' to 0.
-    Alternatively, you can set the hub's status 'Instance.activities.currentStatus' to any number.
-    During the activity's exit sequence the status changes from 3 (stopping) to 0 (stopped)
-
-#### Indikatoren
-There are two indicators 'Instance.Hub_Name.activity' and 'Instance.Hub_Name.connected'. Both are read-only, changing their values has no effect.
-
-**activities.currentActivity**
-Gives you the name of the currently running activity.
-
-**activities.currentStatus**
-Gives you the current status of the hub.
-- 0 = inactive
-- 1 = starting
-- 2 = active
-- 3 = stopping
-
-**activities.{activity name}**
-Status of this activity. Values are the same as above.
-
-
-
-#### Geräte
-**Send Command**
-Set 'Instance.Hub_Name.Device_Name.command' to a number x to send command for x milliseconds.
-A value smaller than 250 probably will send the command only once.
-After sending the state will be set to 0 again.
-
-
-    **Funktion**
-    
-    Instance.Hub_Name.activity zeigt die aktuell gewählte Aktivität an - Nur Lesen
-    
-    Instance.Hub_Name.connected zeigt an, ob der Hub mit ioBroker verbunden ist - Nur Lesen
+`{Instanz}.{Hub Name}.activities.{Aktivität}` zeigt den Status einer Aktivität an.
+Die Bedeutung der Werte ist analog zu `activities.currentStatus`.
 
 
 
@@ -323,14 +296,49 @@ Performance
 ## FAQ
 >Im Forum nach häufig auftretenden Fragen suchen und hier Referenzantwort geben
 
-1. Hub wird nicht gefunden  
-   Lösung:
+1. Die Verbindung zum Hub wird immer wieder unterbrochen.  
 
-2. Verbindung zum Hub wird immer wieder unterbrochen  
-   Lösung:
+   Der Harmony-Hub benötigt für die Kommunikation mit dem Adapter eine ausgezeichnete
+   Funkverbindung. Die Verwendung eines WLAN-Accesspoints in unmittelbarer räumlicher
+   Nähe des Hubs wird empfohlen. 
 
-3. Fehler 500 oder Polling zu schnell  
-   Lösung:
+2. Wie kann man am einfachsten den Knopf "alles aus" via ioBroker implementieren?  
+
+   Setze `{Instanz}.{Hub Name}.activities.currentStatus` auf 0.  
+
+3. Unter Windows erscheint bei der Installation des Adapters die Meldung 
+   `ERR! code ENOGIT` und der Adapter funktioniert nicht.  
+   
+   Vor der Installation des Harmony-Adapters GIT von der Webseite 
+   https://git-scm.com/download/win laden und installieren.
+
+4. Unter Linux erscheint bei der Installation des Adapters die Meldung 
+   `ERR! code ENOGIT` und der Adapter funktioniert nicht.
+   
+   Vor der Installation des Harmony-Adapters GIT mittels Kommandozeile und 
+   `sudo apt install git` installieren.
+
+6. Skripte funktionieren mit neueren Versionen des Adapters nicht mehr.
+
+   Ab Version 0.9.1 dees Adapters werden Objekte anders benannt. Aus alt 
+   `harmony.0.Harmony_Hub` wurde z.B. neu `harmony.0.Harmony Hub`. Bitte
+   die Objekte prüfen und darauf aufsetzende Komponenten wie z.B. Skripte 
+   anpassen.
+
+7. Das WLAN wird nachts automatisch deaktiviert. Der Adapter stellt nach dem
+   Wiedereinschalten des WLANs die Verbindung zum HUB nicht mehr automatisch her.
+
+   Füge einen automatischen Restart der harmony-Instanz (Expertenmodus) etwa 
+   5-10 Minuten nach dem WLAN-Routerstart ein.
+
+8. Der HUB wird nicht gefunden.
+   
+   Prüfe nach, ob der Hub sich wirklich um gleichen Netzwerksubnetz und VLAN
+   wie der ioBroker-Server befindet. Sind Multicasts erlaubt oder werden diese 
+   vom Router gefiltert? Leuchtet die Status-LED am Hub grün?
+   Ist der Hub über die Logitech App zu erreichen? Gehe nach der Anleitung 
+   von Logitech vor, um Konnektivitätsprobleme zu lösen.
+
 
 
 

@@ -1,46 +1,81 @@
-<img src="media/Adaptericon.png" width=150 hight=150 />
-
-# Common Adapter Name
-
-## Vorbemerkung
-In diesem Abschnitt wird etwas Hintergrundinformaton zu der dem Adapter zugrundeliegenden
-Technik gegeben.
-
-Dies kann im Rahmen eines Geräteadapters etwas Information zu dem Gerät sein, oder bei 
-einem Adapter für ein Kommunikationsprotokoll ein wenig Grundlagen zu dem Protokoll.
-
-Trotzdem sollte dieser Text allgemeinverständlich auch für Einsteiger sein.
+---
+date: "{Änderungsdatum des Artikels}"
+title: "{Seitentitel}"
+adapter: "{npm Paketname}"
+---
 
 
-## Der Adapter
+# <img src="media/{Adaptericon}" width=150 hight=150/>&emsp;{Adaptername}-Adapter
+In diesem Abschnitt wird eine endanwenderfreundliche Zusammenfassung des Anwendungszwecks des Adapters gegeben. Diese Zusammenfassung soll kurz gehalten sein (maximal 1-3 kleine Absätze). Sie soll gerade so viele Informationen enthalten, dass das Interesse des Anwenders geweckt wird und er entscheiden kann, ob der Adapter für ihn relevant ist. 
 
-In diesem Abschnitt wird ein wenig grundlegendes zum Adapter gesagt.
-
-
-> Hier netter Screenshot zur Motivation, z.B. aus VIS oder oder oder
+Technische Hintergrundinformationen zum Adapter und ggf. Geräten stehen im Abschnitt "Überblick". 
 
 
-### Ich bin ein Inhaltsverzeichnis oder so etwas ähnliches
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+<!-- Einführungsbild-->
+![{alt BildName}](media/{Bild} "{Bildbeschreibung") <span style="color:grey">  
+*{Bildbeschreibung}*</span>
 
+
+
+<details open><summary>Inhaltsverzeichnis</summary><p>
+
+| Navigation                          |
+|-------------------------------------|
+| 1  [Steckbrief](#steckbrief)        |  
+| 2  [Überblick](#überblick)          |
+| 3  [Installation](#installation)    |
+| 4  [Konfiguration](#konfiguration)  |
+| 5  [Instanz](#instanz)              |
+| 6  [Objekte](#objekte)              |
+| 7  [Besonderheiten](#besonderheiten)|
+| 8  [FAQ](#faq)                      |
+| 9  [Beispiele](#beispiele)          |
+| 10 [Deinstallation](#deinstallation)|
+| 11 [Links](#links)                  |
+| 12 [Historie](#historie)            |
+</p></details>
+
+
+
+<a name="steckbrief"/>
 
 ## Steckbrief
-|  |  |
-| --- | :---: |
-| aktuelle Version stable| link und logo npm |
-| aktuelle Version latest | link und logo npm      |
-| OS| Lunterstützte OS |
-| node-Version | unterstützte node-Versionen |
-| Entwickler | Name/Alias des Entwicklers |
-| Lizenz | Bezeichnung der Lizenz |
-| Github | LINK |
-| Keywords | Suchworte |
-| Kategorie | gemäß Adapterliste |
-| Stand der Doku | letzte Bearbeitung (inhaltlich) |
+> Achtung! Die folgende Tabelle dient nur als Beispiel. Sie wird vom 
+  Dokumentengenerator dynamisch erzeugt und an dieser Stelle eingefügt.
+  Je nach den ausgewählten Feldern sind die Datenquellen z.B. `frontmatter`,
+  `io-package.json` und `package.json` des jeweilgen Adapters.
+
+|                         |                              |
+|-------------------------|:----------------------------:|
+| Stand der Doku          | {date:}                      | 
+| aktuelle Version stable | ![stable][logo]              |
+| aktuelle Version latest | ![latest][logo]              | 
+| OS                      | unterstützte OS              |
+| node-Version            | unterstützte node-Versionen  |
+| Entwickler              | Name/Alias des Entwicklers   |
+| Github                  | LINK                         |
+| Lizenz                  | MIT                          |
+| Kategorie               | gemäß Adapterliste           |
+| Keywords                | `Suchworte`                  |
+| Abhängigkeiten          | `dependencies`               |      
+
+
+
+<a name="überblick"/>
+
+## Überblick
+
+### {Angebundenes System}
+In diesem Abschnitt wird grundlegendes zum einem eventuell angebundenen System
+gesagt. Wofür ist es gut? Was kann man damit machen? Wie erfolgt die 
+Kommunikation? Wie ist der Systemaufbau? Welche Rahmenbedingungen gibt es? 
+
+### {Adaptername}-Adapter
+Hier werden Hintergrundinformaton zum Adapter gegeben. Dies kann im Rahmen eines
+Geräteadapters Information zu dem Gerät sein, oder bei einem Adapter für ein 
+Kommunikationsprotokoll Grundlagen zu dem Protokoll.
+Trotzdem sollte dieser Text allgemeinverständlich auch für Einsteiger sein.
+
 
 
 ## Installation
