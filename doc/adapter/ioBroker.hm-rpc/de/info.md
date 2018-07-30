@@ -1,7 +1,7 @@
 ---
-date: "{Änderungsdatum des Artikels}"
-title: "{Seitentitel}"
-adapter: "{npm Paketname}"
+date: "30.07.2018"
+title: "Homematic HM-RPC"
+adapter: "iobroker.hm-rpc"
 ---
 
 
@@ -11,7 +11,7 @@ Es werden die Module rfd (Funk), rfd-IP (HM-IP Funk), hs485d (wired), cuxd (Zusa
 
 
 <!-- Einführungsbild-->
-![CCU1](media/CCU_600 "Homematic CCU1") <span style="color:grey">  
+![CCU1](media/CCU_600.png "HM-Cen-3-1-B") <span style="color:grey">  
 *HM-Cen-3-1-B*</span>
 
 
