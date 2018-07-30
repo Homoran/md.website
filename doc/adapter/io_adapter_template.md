@@ -6,9 +6,14 @@ adapter: "{npm Paketname}"
 
 
 # <img src="media/{Adaptericon}" width=150 hight=150/>&emsp;{Adaptername}-Adapter
-In diesem Abschnitt wird eine endanwenderfreundliche Zusammenfassung des Anwendungszwecks des Adapters gegeben. Diese Zusammenfassung soll kurz gehalten sein (maximal 1-3 kleine Absätze). Sie soll gerade so viele Informationen enthalten, dass das Interesse des Anwenders geweckt wird und er entscheiden kann, ob der Adapter für ihn relevant ist. 
+In diesem Abschnitt wird eine endanwenderfreundliche Zusammenfassung des 
+Anwendungszwecks des Adapters gegeben. Diese Zusammenfassung soll kurz
+ gehalten sein (maximal 1-3 kleine Absätze). Sie soll gerade so viele
+ Informationen enthalten, dass das Interesse des Anwenders geweckt wird 
+ und er entscheiden kann, ob der Adapter für ihn relevant ist. 
 
-Technische Hintergrundinformationen zum Adapter und ggf. Geräten stehen im Abschnitt "Überblick". 
+Technische Hintergrundinformationen zum Adapter und ggf. Geräten stehen 
+im Abschnitt "Überblick". 
 
 
 <!-- Einführungsbild-->
@@ -66,47 +71,46 @@ Technische Hintergrundinformationen zum Adapter und ggf. Geräten stehen im Absc
 ## Überblick
 
 ### {Angebundenes System}
-In diesem Abschnitt wird grundlegendes zum einem eventuell angebundenen System
-gesagt. Wofür ist es gut? Was kann man damit machen? Wie erfolgt die 
-Kommunikation? Wie ist der Systemaufbau? Welche Rahmenbedingungen gibt es? 
+In diesem Abschnitt wird Grundlegendes zu einem eventuell angebundenen System
+oder Verfahren gesagt. Wofür ist es gut? Was kann man damit machen? Wie erfolgt
+die Kommunikation? Wie ist der Systemaufbau? Welche Rahmenbedingungen gibt es? 
 
 ### {Adaptername}-Adapter
-Hier werden Hintergrundinformaton zum Adapter gegeben. Dies kann im Rahmen eines
-Geräteadapters Information zu dem Gerät sein, oder bei einem Adapter für ein 
-Kommunikationsprotokoll Grundlagen zu dem Protokoll.
+Hier werden Hintergrundinformationen zum Adapter gegeben. Dies kann im Rahmen 
+eines Geräteadapters Information zu dem Gerät sein, oder bei einem Adapter für 
+ein Kommunikationsprotokoll Grundlagen zu dem Protokoll.
 Trotzdem sollte dieser Text allgemeinverständlich auch für Einsteiger sein.
 
 
 
+<a name="voraussetzungen"/>
+
+## Voraussetzungen vor der Installation
+Der Anwender erhält hier Informationen, welche Schritte ggf. vor der Installation 
+des Adapters u.a. auf externen Systemen auszuführen sind. Dazu gehören z.B. die
+Registrierung von API-Keys oder die Konfiguration von angebundenen System 
+nach Herstellerdokumentation. 
+
+
+
+<a name="installation"/>
+
 ## Installation
+Hier werden Besonderheiten zur Installation beschrieben, die den Umfang der
+**hier** dokumentierten Standardinstallation überschreiten. Das kann z.B.
+die manuelle Installation von Software vor der eigentlichen Adapterinstallation
+oder die Freischaltung von Ports auf dem Server sein.
 
-Eine Instanz des Adapters wird über den Admin installiert.
-
-Dazu wird unter der Rubrik "Adapter" die Kachel für den Adaptername Adapter gesucht.
-
-Auf dieser Kachel wird auf das Icon für die erweiterten Einstellungen geklickt.
-
-<img src="media/adapter_AdapterName_install_01.png">
-
-und in diesen Einstellungen auf das (+) zum Erstellen einer Instanz.
-
-<img src="media/adapter_AdapterName_install_02.png">
-
-Es öffnet sich ein Installationsfenster in dem der Fortschritt der Installation
-durch die Anzeige der ablaufenden Befehlsfolgen angezeigt wird.
-
-<img src="media/adapter_AdapterName_install_03.png">
-
-Nach vollendeter Installation schließt sich das Fenster standardmäßig von selbst.
-
-<img src="media/adapter_AdapterName_install_04.png">
+> Eine Instanz des Adapters wird über die ioBroker Admin-Oberfläche installiert. 
+  Die ausführliche Anleitung für die dazu notwendigen Installatonschritte findet 
+  man **hier**.
 
 
-Danach öffnet sich das Konfigurationsfenster der Instanz.
+
+<a name="konfiguration"/>
 
 ##  Konfiguration
 
-Der Adapter findet automatisch die harmony Hubs im lokalen Netzwerk
 
 <img src="media/adapter_AdapterName_config_01.png">
 

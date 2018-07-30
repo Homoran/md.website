@@ -103,7 +103,10 @@ Der Logitech Harmony-Adapter findet automatisch alle Logitech Harmony-Hubs, die 
 über eine WLAN-Verbindung zuammen mit dem ioBroker-Server im gleichen Netzwerksubnetz
 befinden.
 
-
+Objekte zur Auslösung von Funktionen und Aktivitäten (=Befehlsmakros) werden vom
+Adapter automatisch im ioBroker angelegt. Auch der aktuelle Status des Hubs steht
+zur Verfügung. Durch geziehltes Beschreiben oder Lesen der angelegten Objekten 
+kann deren Status geändert und damit Aktionen ausgelöst oder auch abgefragt werden.  
 
 
 
@@ -111,7 +114,7 @@ befinden.
 
 ## Voraussetzungen vor der Installation
 Über den ioBroker Adapter für das Logitech Harmony-System lassen sich keine Geräte oder
-Aktionen neu anlegen oder verändern. Deshalb ist es erforderlich, dass vor der Nutzung 
+Aktivitäten neu anlegen oder verändern. Deshalb ist es erforderlich, dass vor der Nutzung 
 des Adapters das Fernbedienungssystem, wie in der Anleitung von Logitech beschrieben, 
 eingerichtet ist und mit den gesteuerten Geräten zusammen funktioniert.
 
@@ -125,6 +128,24 @@ ausführliche Anleitung für die dazu notwendigen Installatonschritte finden sie
 
 Nach Abschluß der Installation einer Adapterinstanz öffnet sich automatisch 
 ein Konfigurationsfenster.
+
+
+
+<a name="instanz"/>
+
+##  Instanzen
+Die Installation des Adapters hat im Bereich `Objekte` eine aktive Instanz des 
+Logitech Harmony-Hub-Adapters angelegt.
+
+![Instanz](media/a_harmony_instanz.png "Instanz")<span style="color:grey">  
+*Erste Instanz*</span>
+
+Auf einem ioBroker Server lässt sich immer nur eine Instanz des Logitech 
+Harmony-Adapters installieren.
+
+Ob der Adapter aktiviert oder mit dem Logitech Harmony Hub verbunden ist, wird 
+mit der Farbe des Status-Feldes der Instanz verdeutlicht. Zeigt der Mauszeiger
+auf das Symbol, werden weitere Detailinformationen dargestellt. 
 
 
 
@@ -155,21 +176,7 @@ verlassen. Dadurch efolgt im Anschluß ein Neustart des Adapters.
 
 
 
-<a name="instanz"/>
 
-##  Instanzen
-Die Installation des Adapters hat im Bereich `Objekte` eine aktive Instanz des 
-Logitech Harmony-Hub-Adapters angelegt.
-
-![Instanz](media/a_harmony_instanz.png "Instanz")<span style="color:grey">  
-*Erste Instanz*</span>
-
-Auf einem ioBroker Server lässt sich immer nur eine Instanz des Logitech 
-Harmony-Adapters installieren.
-
-Ob der Adapter aktiviert oder mit dem Logitech Harmony Hub verbunden ist, ist 
-an der Farbe des Status-Feldes der Instanz zu erkennen. Zeigt der Mauszeiger
-auf das Symbol, werden weitere Detailinformationen angezeigt. 
 
 
 
@@ -184,7 +191,7 @@ darüber informiert, ob die Kommunikation mit dem Hub reibungslos erfolgt.
 ![Objekte](media/a_harmony_objekte.png "Harmony Objekte")<span style="color:grey">  
 *Objekte des Harmony-Adapters*</span>
 
-Die angelegten Objekte und ihre Funktionen sind wie folgt definiert:
+Die angelegten Objekte und ihre Bedeutungen sind wie folgt definiert:
 
 Objekt | Zugriff | Bescheibung 
 :------|:-------:|:-----------
@@ -192,29 +199,31 @@ Objekt | Zugriff | Bescheibung
 &emsp;**Harmony Hub**| R | Name des *Hubs*
 &emsp;&emsp;**Apple TV Generation 3**| R | Name eines *Geräts*, enthält Gerätefunktionen 
 &emsp;&emsp;**Denon AV-Empfänger**| R | Name eines *Geräts*, enthält Gerätefunktionen 
-&emsp;&emsp;**:**| R | Weitere *Geräte* mit ihren Funktionen
+&emsp;&emsp;**:**| R | Weitere *Geräte*
 &emsp;&emsp;**activities**| R | Liste mit allen im Harmony Hub programmierten *Aktivitäten* 
 &emsp;&emsp;***hubBlocked***| R | Zeigt an, ob der Hub gerade beschäftigt ist
 &emsp;&emsp;***hubConnected***| R | Status der Verbindung zwischen Adapter und Hub
 
-### Funktionen
+### Gerätefunktionen
 Öffnet man ein Gerät, so erhält man eine Liste mit allen zum Gerät gehörenden
-Funktionen. Diese Funktionen sind gerätespezifisch und unterscheiden sich deshalb
-bei Geräten unterschiedlichen Typs.
+Funktionalitäten. Diese Gerätefunktionen sind gerätespezifisch und unterscheiden sich 
+deshalb bei Geräten unterschiedlichen Typs.
 
 ![Gerät](media/a_harmony_geraet.png "Harmony Gerät")<span style="color:grey">  
-*Funktionen eines Geräts*</span>
+*Gerätefunktionen*</span>
 
-#### Auslösen einer Funktion
-Jede Funktion `{Instanz}.{Hub Name}.{Gerät}.{Funktion}` löst eine entsprechende
-Reaktion des angesprochenen Geräts aus. Das kann man testen, in dem man mit dem
-Mauszeiger die Glocke rechts der Funktion betätigt. Alternativ kann man mit dem
-Stiftsymbol dort auch einen Wert eintragen. 
+#### Auslösen einer Gerätefunktion
+Jede Gerätefunktion `{Instanz}.{Hub Name}.{Gerät}.{Gerätefunktion}` löst eine 
+entsprechende Reaktion des angesprochenen Geräts aus. Die Werte von Gerätefunktionen 
+könne, gelesen
+und geschrieben werden Das kann man testen, in dem 
+man mit dem Mauszeiger die Glocke rechts der Funktion betätigt. Alternativ kann man 
+mit dem Stiftsymbol dort auch einen Wert eintragen. 
 Werte haben die Einheit `Millisekunden`. Wird ein Wert zwischen 1 und 250ms
 eingegeben, wird vom Harmony Hub meist ein einfacher Tastendruck in der 
 vorgegeben Länge ausgegeben. Größere Werte als 250ms können zur 
-Mehrfachbetätigung der Funktion führen.
-Nach dem Auslöseng der Funktion ändert sich der Wert wieder auf 0.
+Mehrfachbetätigung der Gerätefunktion führen.
+Nach dem Auslösen der Gerätefunktion ändert sich der Wert wieder auf 0.
 
 
 ### Aktivitäten
@@ -339,6 +348,12 @@ Performance
    Ist der Hub über die Logitech App zu erreichen? Gehe nach der Anleitung 
    von Logitech vor, um Konnektivitätsprobleme zu lösen.
 
+9. Es lässt sich nur eine Instanz des Adapters installieren.
+    
+   Auf einem ioBroker Server lässt sich immer nur eine Instanz des Logitech 
+   Harmony-Adapters installieren.
+ 
+
 
 
 
@@ -347,7 +362,7 @@ Performance
 ## Beispiele
 
 ### JavaScript
-
+Auslesen von States
 ```javascript
 if (getState("hm-rpc.0.MEQ01234567.2.STATE").val == true) {
   setState("harmony.0.Harmony Hub.Denon AV-Empfänger.PowerOn"/*Denon AV-Empfänger:PowerOn*/, '1', true);
