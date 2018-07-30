@@ -6,14 +6,7 @@ adapter: "{npm Paketname}"
 
 
 # <img src="media/{Adaptericon}" width=150 hight=150/>&emsp;{Adaptername}-Adapter
-In diesem Abschnitt wird eine endanwenderfreundliche Zusammenfassung des 
-Anwendungszwecks des Adapters gegeben. Diese Zusammenfassung soll kurz
- gehalten sein (maximal 1-3 kleine Absätze). Sie soll gerade so viele
- Informationen enthalten, dass das Interesse des Anwenders geweckt wird 
- und er entscheiden kann, ob der Adapter für ihn relevant ist. 
-
-Technische Hintergrundinformationen zum Adapter und ggf. Geräten stehen 
-im Abschnitt "Überblick". 
+Der hm-rpc Adapter bietet die Anbindung an die Kommunikationsmodule einer Homematic-Zentrale. Es werden die Module rfd (Funk), rfd-IP (HM-IP Funk), hs485d (wired), cuxd (Zusatzsoftware zur Anbindung externer Komponenten wie EnOcean, FS20 usw.) und homegear (CCU Ersatz) unterstützt. Eine Instanz des Adapters ist für genau EINES dieser Module zuständig. Sollen mehrere Module parallel unterstützt werden, muss für jedes Modul eine eigene Instanz installiert werden. 
 
 
 <!-- Einführungsbild-->
