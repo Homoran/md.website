@@ -1,0 +1,18 @@
+{
+  "common": {
+    "name": "Logitech Harmony Hub",
+    "docversion": "0.1.0"
+  },
+  "authors": [
+    "Rainer <>",
+    "Thomas Rohé <thomas@familie-rohe.eu>"
+  ],
+  "languages": [
+    "de",
+    "en"
+  ],
+  "native": {
+    "filename": "info.md",
+    "mediadir": "media"
+  }
+}
