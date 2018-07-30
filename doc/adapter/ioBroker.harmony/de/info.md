@@ -131,24 +131,6 @@ ein Konfigurationsfenster.
 
 
 
-<a name="instanz"/>
-
-##  Instanzen
-Die Installation des Adapters hat im Bereich `Objekte` eine aktive Instanz des 
-Logitech Harmony-Hub-Adapters angelegt.
-
-![Instanz](media/a_harmony_instanz.png "Instanz")<span style="color:grey">  
-*Erste Instanz*</span>
-
-Auf einem ioBroker Server lässt sich immer nur eine Instanz des Logitech 
-Harmony-Adapters installieren.
-
-Ob der Adapter aktiviert oder mit dem Logitech Harmony Hub verbunden ist, wird 
-mit der Farbe des Status-Feldes der Instanz verdeutlicht. Zeigt der Mauszeiger
-auf das Symbol, werden weitere Detailinformationen dargestellt. 
-
-
-
 <a name="konfiguration"/>
 
 ##  Konfiguration
@@ -176,7 +158,21 @@ verlassen. Dadurch efolgt im Anschluß ein Neustart des Adapters.
 
 
 
+<a name="instanz"/>
 
+##  Instanzen
+Die Installation des Adapters hat im Bereich `Objekte` eine aktive Instanz des 
+Logitech Harmony-Hub-Adapters angelegt.
+
+![Instanz](media/a_harmony_instanz.png "Instanz")<span style="color:grey">  
+*Erste Instanz*</span>
+
+Auf einem ioBroker Server lässt sich immer nur eine Instanz des Logitech 
+Harmony-Adapters installieren.
+
+Ob der Adapter aktiviert oder mit dem Logitech Harmony Hub verbunden ist, wird 
+mit der Farbe des Status-Feldes der Instanz verdeutlicht. Zeigt der Mauszeiger
+auf das Symbol, werden weitere Detailinformationen dargestellt. 
 
 
 
@@ -254,7 +250,7 @@ Aktivität als Zeichenfolge.
 an. Dabei bedeuten die Werte
 - 0 = inaktiv
 - 1 = startend
-- 2 = aktive
+- 2 = aktiv
 - 3 = beendend
 
 `{Instanz}.{Hub Name}.activities.{Aktivität}` zeigt den Status einer Aktivität an.

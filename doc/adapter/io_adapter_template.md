@@ -102,76 +102,132 @@ die manuelle Installation von Software vor der eigentlichen Adapterinstallation
 oder die Freischaltung von Ports auf dem Server sein.
 
 > Eine Instanz des Adapters wird über die ioBroker Admin-Oberfläche installiert. 
-  Die ausführliche Anleitung für die dazu notwendigen Installatonschritte findet 
-  man **hier**.
+  Die ausführliche Anleitung für die dazu notwendigen Installatonschritte ist
+  **hier** beschrieben.
 
 
 
 <a name="konfiguration"/>
 
 ##  Konfiguration
+Kurzer Einleitungssatz zur Konfiguration. Für jedes Admin-Fenster ist ein separter
+Abschnitt vorzusehen.
 
 
-<img src="media/adapter_AdapterName_config_01.png">
+<a name="{Eindeutiger Fensterbezeichner}"/>
 
-Die angezeigten Felder müssen nur ausgefüllt werden, wenn der Hub mit Usernamen und
-Passwort gesichert ist.
+### Fenster "{Fenstertitel}"
+![{alt-Name}](media/{Formularfelderbild} "{Bildbeschreibung}")<span style="color:grey">  
+*{Bildbeschreibung}*</span>
 
-Jetzt kann man das Konfigurationsfenster schließen.
+| Feld               | Beschreibung |                                                                       
+|:-------------------|:-------------|
+|**{Formularfeld 1}**|{Beschreibung}|
+|**{Formularfeld 2}**|{Beschreibung}|
+|**{Formularfeld n}**|{Beschreibung}|
 
-
-
-
-## Angelegte Objekte und ihre Bedeutung
-
-in der Rubrik wurde eine neue Gruppe für die Instanz (üblicherweise harmony.0) angelegt.
-
-<img src="media/adapter_AdapterName_objects_01.png">
-
-Die Struktur der angelegten Objekte und ihre Funktionen sind wie folgt:
-
-**Instanz**
-
-mehrere Instanzen sind bei diesem Adapter nicht erlaubt
+Platz für besondere Hinweise.
 
 
-   **Hub Name**
-   
-   Name des Hubs
-   
-   
-      **Gerät**
-      
-      Hier erscheinen alle am Harmony-Hub angelernten Geräte
-      
-         
-         **Funktion**
-         
-         Die zur Verfügung stehenden Funktionen hängen von dem entsprechenden Gerät ab
-         
-      
-      **Aktivität**
-      
-      Hier erscheinen alle am Harmony Hub programmierten Aktivitäten
-      
-      
-         **Funktion**
-         
-         Instance.Hub_Name.activity zeigt die aktuell gewählte Aktivität an - Nur Lesen
-         
-         Instance.Hub_Name.connected zeigt an, ob der Hub mit ioBroker verbunden ist - Nur Lesen
+<a name="{Eindeutiger Fensterbezeichner}"/>
+
+### Fenster "{Fenstertitel}"
+![{alt-Name}](media/{Formularfelderbild} "{Bildbeschreibung}")<span style="color:grey">  
+*{Bildbeschreibung}*</span>
+
+| Feld               | Beschreibung |                                                                       
+|:-------------------|:-------------|
+|**{Formularfeld 1}**|{Beschreibung}|
+|**{Formularfeld 2}**|{Beschreibung}|
+|**{Formularfeld n}**|{Beschreibung}|
+
+Platz für besondere Hinweise.
+
+Abschließender Text zur Konfiguration
+
+> Nach Abschluß der Konfiguration wird der Konfigurationsdialog mit 
+  `SPEICHERN UND SCHLIEßEN` verlassen. Dadurch efolgt im Anschluß ein 
+  Neustart des Adapters.
 
 
 
+<a name="instanz"/>
+
+##  Instanzen
+> Die Installation des Adapters hat im Bereich `Objekte` eine aktive Instanz des 
+  {Adaptername}-Adapters angelegt.
+
+![Instanz](media/a_harmony_instanz.png "Instanz")<span style="color:grey">  
+*Erste Instanz*</span>
+
+Platz für weitere Hinweise zu Instanzen des Adapters. Z.B. ob mehrere Instanzen
+auf einen Server installierbar sind oder wie sich Instanzen auf 
+Multihost-Systemen verhalten.
+
+> Ob der Adapter aktiviert oder mit dem {Gerät}  verbunden ist, 
+  wird mit der Farbe des Status-Feldes der Instanz verdeutlicht. Zeigt der 
+  Mauszeiger auf das Symbol, werden weitere Detailinformationen dargestellt. 
 
 
-#### Bedeutung der States
-(in die Struktur oben einbinden!)
 
-Beschreibung der Objekte
+<a name="objekte"/>
 
-Beschreibung der States
- Beschreibung der möglichen Zustände
+## Objekte des Adapters
+
+> Im Bereich `Objekte` werden in einer Baumstruktur alle vom Adapter im Hub 
+  erkannten Geräte und Aktivitäten aufgelistet. Zusätzlich wird auch noch 
+  darüber informiert, ob die Kommunikation mit dem Hub reibungslos erfolgt. 
+
+![alt-Objektename](media/{Bildname} ""{Bildbeschreibung}")<span style="color:grey">  
+*{Bildbeschreibung}*</span>
+
+> Die angelegten Objekte und ihre Bedeutungen sind wie folgt definiert:
+
+Objekt                    | Zugriff | Bescheibung 
+:-------------------------|:-------:|:-----------
+**{Instanz}**                 |  R  | Name der ersten *Instanz* des Adapters
+&emsp;**{Sub-Objekt}**        |  R  | Name des *{...}*, Liste, Bedeutung ...
+&emsp;&emsp;**{Sub-Objekt}**  |  R  | Name des *{...}*, Liste, Bedeutung ... 
+&emsp;&emsp;***{Datenpunkt}***| R/W | Beschreibung des Datenpunktes mit Funktion 
+&emsp;&emsp;***{Datenpunkt}***| R/W | Beschreibung des Datenpunktes mit Funktion 
+
+Mit der Tabelle wird versucht, den Objektbaum vereinfacht darzustellen
+und dem Anwender die Bedeutung und Anwendung der einzelnen Objekte zu
+veranschaulichen. Sie stellt die Referenzdokumentaion für den Anwender für 
+z.B. den Zugriffe mit JavaScript auf die Objekthierarchie dar.
+
+### {Weitere tiefergehende Erläuterungen zu Objektgruppierungen}
+Hier könne Ausschnitte des Objektbaums hervorgehoben und besonders betrachtet 
+werden. 
+
+#### {Weitere tiefergehende Erläuterungen zu einzelnen Objekten oder Funktionen}
+Da der Platz für Beschreibungen in der Objekttabelle in der Regel nicht ausreichen 
+müssen hier z.B. einzelne Datenpunkte ausführlicher dokumentiert werden.
+
+Beispiel für beschreibbare Datenpunkte:
+#### Starten einer Aktivität
+Aktivitäten werden gestartet, wenn man bei einer Aktivität 
+`{Instanz}.{Hub Name}.activities.{Aktivität}` eine Zahl größer als 0 einträgt. 
+Während der Ausführung der Aktivität ändert sich dieser Wert zuerst 
+nach 1 (=startend) und dann nach 2 (=aktiv).
+
+### {Weitere tiefergehende Erläuterungen zu Objektgruppierungen}
+Entsprechend dem Aufbau des Objektbaums und der Funktion des Adapters
+hier individuelle Gestaltungsmöglichkeiten gegeben.
+
+Beispiel für die Beschreibung einzelner Datenpunkte:
+#### Statuswerte
+`{Instanz}.{Hub Name}.activities.currentActivity` liefert die aktuell ausgeführte
+Aktivität als Zeichenfolge.
+
+`{Instanz}.{Hub Name}.activities.currentStatus` zeigt den Status des Harmony Hubs 
+an. Dabei bedeuten die Werte
+- 0 = inaktiv
+- 1 = startend
+- 2 = aktiv
+
+
+
 
 
 
