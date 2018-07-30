@@ -5,7 +5,7 @@ adapter: "iobroker.hm-rpc"
 ---
 
 
-# <img src="media/homematic.png" width=150 hight=150/>&emsp;{Adaptername}-Adapter
+# <img src="media/homematic.png" width=150 hight=150/>&emsp;HM-RPC-Adapter
 Der hm-rpc Adapter bietet die Anbindung an die Kommunikationsmodule einer Homematic-Zentrale.
 Es werden die Module rfd (Funk), rfd-IP (HM-IP Funk), hs485d (wired), cuxd (Zusatzsoftware zur Anbindung externer Komponenten) und homegear (CCU Ersatz) unterstützt. Eine Instanz des Adapters ist für genau EINES dieser Module zuständig. Sollen mehrere Module parallel unterstützt werden, muss für jedes Modul eine eigene Instanz installiert werden.
 
@@ -21,7 +21,7 @@ Es werden die Module rfd (Funk), rfd-IP (HM-IP Funk), hs485d (wired), cuxd (Zusa
 | Navigation                          |
 |-------------------------------------|
 | 1  [Steckbrief](#steckbrief)        |  
-| 2  [Überblick](#überblick)          |
+| 2  [Beschreibung](#beschreibung)          |
 | 3  [Installation](#installation)    |
 | 4  [Konfiguration](#konfiguration)  |
 | 5  [Instanz](#instanz)              |
@@ -49,31 +49,45 @@ Es werden die Module rfd (Funk), rfd-IP (HM-IP Funk), hs485d (wired), cuxd (Zusa
 | Stand der Doku          | {date:}                      | 
 | aktuelle Version stable | ![stable][logo]              |
 | aktuelle Version latest | ![latest][logo]              | 
-| OS                      | unterstützte OS              |
-| node-Version            | unterstützte node-Versionen  |
-| Entwickler              | Name/Alias des Entwicklers   |
-| Github                  | LINK                         |
+| OS                      | Linux, WIN, OS X             |
+| node-Version            | >= 4.0                       |
+| Entwickler              | hobbyquaker, bluefox   |
+| Github                  | https://github.com/ioBroker/ioBroker.hm-rpc       |
 | Lizenz                  | MIT                          |
 | Kategorie               | gemäß Adapterliste           |
-| Keywords                | `Suchworte`                  |
+| Keywords                | Homematic, CCU                   |
 | Abhängigkeiten          | `dependencies`               |      
 
 
 
 <a name="überblick"/>
 
-## Überblick
+## Beschreibung
 
-### {Angebundenes System}
-In diesem Abschnitt wird Grundlegendes zu einem eventuell angebundenen System
-oder Verfahren gesagt. Wofür ist es gut? Was kann man damit machen? Wie erfolgt
-die Kommunikation? Wie ist der Systemaufbau? Welche Rahmenbedingungen gibt es? 
+### HM-RPC
+Der **R**emote **P**rocedur **C**all, kurz RPC ist eine Technik zur Realisierung von 
+Interprozesskommunikation. Sie ermöglicht den Aufruf von Funktionen in anderen Adressräumen. 
+Im Normalfall werden die aufgerufenen Funktionen auf einem anderen Computer als das aufrufende 
+Programm ausgeführt. Es existieren viele Implementierungen dieser Technik, die in der Regel 
+untereinander nicht kompatibel sind.
 
-### {Adaptername}-Adapter
-Hier werden Hintergrundinformationen zum Adapter gegeben. Dies kann im Rahmen 
-eines Geräteadapters Information zu dem Gerät sein, oder bei einem Adapter für 
-ein Kommunikationsprotokoll Grundlagen zu dem Protokoll.
-Trotzdem sollte dieser Text allgemeinverständlich auch für Einsteiger sein.
+
+
+
+### HM-RPC-Adapter
+Der Adapter kommuniziert entweder über BIN-RPC oder XML-RPC mit dem entsprechenden Modul.
+Je nach verbundenem Dienst ist das entsprechende Protokoll zu wählen.
+
+Der Adapter arbeitet über eine Ereignisschnittstelle. Daher ist es wichtig, die Adapter 
+Adresse korrekt anzugeben. Die CCU sendet dann automatisch Ereignisse an den Adapter, 
+d.h. ein zyklisches Pollen wie z.B. bei hm-rega ist nicht notwendig. Zusätzlich verfügt 
+der Adapter über die Funktionalität, die Verbindung zur CCU zyklisch zu überwachen. 
+Werden neue Geräte an der CCU angelernt ist es notwendig, den Adapter neu zu starten 
+mit der Konfigration “Initiere Geräte neu (einmalig)”. Dadurch werden die Informationen 
+über die neuen Homematic-Geräte an den Adapter übertragen.
+
+
+
 
 
 
